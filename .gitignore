@@ -162,9 +162,9 @@ $RECYCLE.BIN/
 
 
 ### Build Systems ###
-bower_components
+bower_components/
 .bower-cache
 .bower-registry
 .bower-tmp
-build
-node_modules
+build/
+node_modules/
