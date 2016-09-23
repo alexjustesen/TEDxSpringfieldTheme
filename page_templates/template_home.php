@@ -6,13 +6,12 @@ Template Name: Homepage
 get_header();
 ?>
 
-<div class="banner" style="background: url(<?php the_field('banner_background'); ?>) top center repeat-x;">
-  <div class="banner-container">
-    <h1><?php the_field('banner_title'); ?></h1>
-
-    <h2><?php the_field('banner_subtitle'); ?></h2>
-    <a class="btn btn-danger" href="<?php the_field('banner_callout_button_link'); ?>"><?php the_field('banner_callout_button_text'); ?></a>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="<?php the_field( 'banner_background' ); ?>" class="img-responsive"/>
+        </div>
+    </div>
 </div>
 
 <div class="container contents">
