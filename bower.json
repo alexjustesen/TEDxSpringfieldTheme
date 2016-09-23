@@ -1,9 +1,9 @@
 {
-  "name": "TEDxTheme",
+  "name": "TEDxSpringfield",
   "version": "1.0.0",
-  "homepage": "https://github.com/twg/TEDxTheme",
+  "homepage": "https://github.com/alexjustesen/TEDxSpringfieldTheme",
   "authors": [
-    "Emerson Lackey & Bil Li"
+    "Alex Justesen"
   ],
   "license": "MIT",
   "private": true,
@@ -16,10 +16,12 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass-official": "~3.1.1",
-    "bootstrap": "~3.1.1",
-    "font-awesome": "~4.1.0",
-    "animate.css": "~3.1.1",
-    "angular": "~1.2.17"
-  }
+    "bootstrap-sass-official": "~3.3.7",
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.6.3",
+    "animate.css": "~3.5.2",
+    "angular": "~1.2.30"
+  },
+  "description": "",
+  "main": ""
 }
