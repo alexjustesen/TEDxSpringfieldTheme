@@ -9,7 +9,7 @@
 
 # TEDxTheme
 
-This theme has been designed and coded by [The Working Group](http://twg.ca) and [TEDxToronto](http://www.tedxtoronto.com) in the hopes that other TEDx organizations will find this easy to use to promote and manage their own events.
+This theme has been designed and coded by [The Working Group](http://twg.ca) and [TEDxToronto](http://www.tedxtoronto.com) and modified by [Alex Justesen](http://alexjustesen.com) in the hopes that other TEDx organizations will find this easy to use to promote and manage their own events.
 
 ### Requirements
 
@@ -34,3 +34,15 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 * `npm install` - Install development dependencies
 * `gulp watch` - Starts the Grunt task that builds css and js. Also has a livereload server running
 * `gulp vendor-js vendor-css` - Concats and minifies Bower dependencies into a single `plugin.min.js` file. These dependencies are declared in the `Gulpfile.js`. To add a new plugin we recommend installing it with Bower and then declaring it in the gulp file.
+
+
+### Change Log
+
+#### v1.0.0 (Sept 23, 2016)
+- Forked from TEDxTheme and renamed to TEDxSpringfieldTheme
+- Removed TWG and Jet Cooper images from `footer.php`
+- Added Built by 'Alex Justesen' to 'footer.php'
+- Removed banner text and button from `page_templates/template_home.php`
+- Removed speaker video preview from `shortcode_templates/speaker_card_shortcode.php`
+- Removed related speaker video preview from `sidebar-speaker.php`
+- Removed http protocol from YouTube preview image from `shortcode_templates/talk_shortcode.php` to support http and https protocols
