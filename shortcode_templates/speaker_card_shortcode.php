@@ -4,7 +4,6 @@
     <?php foreach ($slugs as $slug): ?>
       <?php
       $speaker     = $this->get_speaker_by_slug($slug);
-      $video_id    = $this->get_video_id($slug);
       $name        = $speaker->post_title;
       $excerpt     = $speaker->post_excerpt;
       $description = get_post_meta($speaker->ID, '_speaker_video_description', true);
@@ -26,17 +25,6 @@
             </div>
           </div>
           <!-- .speaker-title -->
-          <?php if($video_id != ""): ?>
-            <div class="speaker-video-thumb">
-              <div class="hover-container">
-                <div class="hover-table">
-                  <div><span>See Intro Video</span></div>
-                </div>
-              </div>
-              <img src="http://img.youtube.com/vi/<?= $video_id; ?>/0.jpg">
-            </div>
-          <?php endif; ?>
-          <!-- .speaker-video-thumb -->
         </a>
       </div>
     <?php endforeach; ?>
