@@ -1,12 +1,11 @@
 @keyframes fadeOutUp {
-  0% {
+  from {
     opacity: 1;
-    transform: translateY(0);
   }
 
-  100% {
+  to {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translate3d(0, -100%, 0);
   }
 }
 

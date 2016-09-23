@@ -1,16 +1,16 @@
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
+  from {
+    transform: scale3d(1, 1, 1);
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale3d(1.05, 1.05, 1.05);
   }
 
-  100% {
-    transform: scale(1);
+  to {
+    transform: scale3d(1, 1, 1);
   }
 }
 
