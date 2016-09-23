@@ -21,7 +21,7 @@
             <img alt='<?php the_title(); ?>' src="http://img.youtube.com/vi/<?= $video_id; ?>/0.jpg" class="talk-photo">
           </a>
         </div>
-        <div class="row ">
+        <div class="row">
           <div class="col-md-6 talk-meta">
             <?php single_term($post, 'talk_types'); ?>
           </div>
