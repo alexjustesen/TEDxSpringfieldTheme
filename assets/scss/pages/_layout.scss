@@ -1,5 +1,5 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $fontBody;
 }
 
 body {
@@ -7,11 +7,11 @@ body {
 }
 
 .white-bg {
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .black-bg {
-  background-color: #181818;
+  background-color: $black;
 }
 
 .gutter-left {
