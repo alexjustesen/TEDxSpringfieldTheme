@@ -783,7 +783,7 @@ ul.page-numbers {
       line-height: 19px; }
 
 .speaker-tile {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   overflow: hidden; }
   .speaker-tile a {
     text-decoration: none; }
@@ -795,9 +795,10 @@ ul.page-numbers {
     position: relative;
     text-align: center; }
     .speaker-tile .speaker-tile-container .speaker-description {
-      background-position: center top;
+      background-position: top center;
       background-size: cover;
-      color: #FFF;
+      background-repeat: no-repeat;
+      color: #fff;
       display: block;
       height: 292px;
       overflow: hidden;
@@ -809,7 +810,7 @@ ul.page-numbers {
         background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, rgba(0, 0, 0, 0.65)));
         background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.65) 80%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
-        color: #FFF;
+        color: #fff;
         display: block;
         border: 0 solid transparent;
         transition: all 0.3s linear;
@@ -836,48 +837,8 @@ ul.page-numbers {
         .speaker-tile .speaker-tile-container .speaker-description .speaker-info .speaker-position {
           font-size: 11px;
           line-height: 16px; }
-    .speaker-tile .speaker-tile-container .speaker-video-thumb {
-      border-top: 1px solid #FFF;
-      position: relative;
-      text-align: center; }
-      .speaker-tile .speaker-tile-container .speaker-video-thumb .hover-container {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        z-index: 1; }
-      .speaker-tile .speaker-tile-container .speaker-video-thumb .hover-table {
-        display: table;
-        height: 100%;
-        width: 100%;
-        transition: opacity 0.3s linear;
-        -webkit-transition: opacity 0.3s linear;
-        -moz-transition: opacity 0.3s linear;
-        -o-transition: opacity 0.3s linear;
-        opacity: 0;
-        -moz-opacity: 0;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
-        .speaker-tile .speaker-tile-container .speaker-video-thumb .hover-table div {
-          display: table-cell;
-          vertical-align: middle; }
-          .speaker-tile .speaker-tile-container .speaker-video-thumb .hover-table div span {
-            color: #FFFFFF;
-            display: block;
-            font-size: 16px;
-            font-weight: bold; }
-      .speaker-tile .speaker-tile-container .speaker-video-thumb img {
-        display: block;
-        height: 100%;
-        width: 100%;
-        margin-bottom: 0;
-        position: relative;
-        transition: opacity 0.3s linear;
-        -webkit-transition: opacity 0.3s linear;
-        -moz-transition: opacity 0.3s linear;
-        -o-transition: opacity 0.3s linear;
-        -webkit-perspective: 1000;
-        -webkit-backface-visibility: hidden; }
     .speaker-tile .speaker-tile-container:hover .speaker-description .speaker-border {
-      border: 10px solid #ff2b06; }
+      border: 5px solid #e62b1e; }
     .speaker-tile .speaker-tile-container:hover img {
       filter: alpha(opacity=50);
       opacity: 0.5;
