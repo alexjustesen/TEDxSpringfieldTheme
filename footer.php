@@ -1,6 +1,5 @@
-<?php
-$template_url = get_template_directory_uri();
-?>
+<?php $template_url = get_template_directory_uri(); ?>
+
 <div class="black-bg spacing-top">
   <div class="container">
     <footer>
@@ -14,7 +13,7 @@ $template_url = get_template_directory_uri();
           <?= get_theme_mod('twitter_follow_button'); ?>
         </div>
         <div class="col-md-5 col-sm-12 web-partners text-right">
-          <div class="built-by gutter-right gutter-bottom">Built by <a href="http://alexjustesen.com">Alex Justesen</a></div>
+          <div class="built-by gutter-right gutter-bottom">Built by <a href="//alexjustesen.com">Alex Justesen</a></div>
         </div>
       </div>
 
