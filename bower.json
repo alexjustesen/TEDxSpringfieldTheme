@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "homepage": "https://github.com/alexjustesen/TEDxSpringfieldTheme",
   "authors": [
-    "Alex Justesen"
+      {
+        "name": "Alex Justesen",
+        "email": "alex@alexjustesen.com",
+        "homepage": "http://alexjustesen.com"
+      }
   ],
   "license": "MIT",
   "private": true,
