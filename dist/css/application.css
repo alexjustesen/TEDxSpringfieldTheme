@@ -443,12 +443,10 @@ nav.primary-nav-secondary ul li.current-menu-item > a {
     max-height: 100px !important; } }
 
 footer {
-  -webkit-box-shadow: 0px 500px 0px 500px #181818;
-  box-shadow: 0px 500px 0px 500px #181818;
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 11px;
-  color: #666666; }
+  color: #f6f6f6; }
   footer .built-by {
     display: inline-block;
     vertical-align: bottom;
@@ -457,22 +455,6 @@ footer {
     font-size: 12px; }
     footer .web-partners a {
       display: inline-block; }
-    footer .web-partners .ir {
-      background: transparent url("../../images/sprite-logos.png") no-repeat left 0; }
-    footer .web-partners .jc-link {
-      vertical-align: top;
-      width: 123px;
-      height: 42px; }
-    footer .web-partners .jc-link:hover {
-      background-position: left -50px; }
-    footer .web-partners .twg-link {
-      width: 126px;
-      height: 30px;
-      background-position: left -100px; }
-    footer .web-partners .twg-link:hover {
-      background-position: left -130px; }
-    footer .web-partners span, footer .web-partners img {
-      vertical-align: middle; }
   footer .legal {
     font-size: 11px; }
 
