@@ -19,19 +19,28 @@
             <div class="team-photo-wrapper">
                 
                 <img alt='<?php the_title(); ?>' src='<?=  $thumbnail_src; ?>' class="team-photo img-responsive">
+                                   
+                <?php
+                    $team_links = array();
                 
-                <?php $twitter = get_post_meta($post->ID, '_team_twitter_link', true); ?>
+                    if ( get_post_meta($post->ID, '_team_twitter_link', true) ) {
+                        $team_links['twitter'] = get_post_meta($post->ID, '_team_twitter_link', true); }
+                ?>
                     
-                <?php if (!empty($twitter)): ?>
+                <?php if ( !empty( $team_links ) ): ?>
 
                 <div class="team-links">
-
-                    <a href="<?=$twitter?>" target="_blank" alt="John Smith's Twitter"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                    
+                    <?php if (!empty($team_links['twitter'])): ?>
+                        
+                        <a href="<?=$team_links['twitter']?>" target="_blank" title="<?=$post->post_title?>'s Twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        
+                    <?php endif; ?>
 
                 </div>
-                <!-- .team-links -->
-
+                
                 <?php endif; ?>
+                <!-- .team-links -->
                 
             </div>
             <!-- .team-photo-wrapper -->
@@ -40,7 +49,7 @@
 
                 <div class="team-title">
                     
-                    <h2><?=  $post->post_title; ?></h2>
+                    <h2><?=$post->post_title?></h2>
 
                     <div class="team-role" alt="<?=  get_post_meta($post->ID, '_team_job_description', true) ?>">
                         <?=  get_post_meta($post->ID, '_team_job_description', true) ?>
