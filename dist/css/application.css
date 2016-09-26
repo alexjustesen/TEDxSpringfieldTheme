@@ -1,9 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 h1, h2, h3, h4, h5, h6, strong, b {
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
   padding-top: 0; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,7 +13,7 @@ h4 {
   font-size: 20px; }
 
 p, ul, ol, li, div, blockquote, dl {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
   line-height: 160%; }
 
@@ -757,7 +756,6 @@ ul.page-numbers {
   .team-tile .details-open .team-photo {
     top: -40px; }
   .team-tile .team-info {
-    font-size: 14px;
     background: #ff2b06;
     color: #fff; }
     .team-tile .team-info a, .team-tile .team-info h2, .team-tile .team-info .team-role {
@@ -767,22 +765,15 @@ ul.page-numbers {
       height: 150px;
       width: 100%;
       overflow: auto;
-      font-size: 13px; }
-  .team-tile .team-links .ico {
-    height: 35px;
-    width: 35px;
+      font-size: 12px; }
+  .team-tile .team-links .twitter {
+    padding: 5px;
     border-top: solid 1px #ff2b06;
     border-color: rgba(0, 0, 0, 0.1); }
-    .team-tile .team-links .ico a {
-      display: block;
-      height: 100%;
-      z-index: 100;
-      position: relative; }
-  .team-tile .team-links .tweet {
-    border-bottom: none; }
-    .team-tile .team-links .tweet:before {
-      background-position: -30px -385px;
-      z-index: 10; }
+    .team-tile .team-links .twitter a {
+      padding: 5px; }
+      .team-tile .team-links .twitter a i.fa {
+        margin: 3px; }
   .team-tile .team-title {
     padding: 15px 20px;
     margin-right: 35px;
@@ -790,7 +781,10 @@ ul.page-numbers {
     border-color: rgba(0, 0, 0, 0.1);
     line-height: 1; }
     .team-tile .team-title .team-role {
-      font-size: 16px; }
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
       .team-tile .team-title .team-role p {
         margin: 0; }
     .team-tile .team-title h2 {
