@@ -15,8 +15,6 @@
 
   <!-- JQuery -->
   <script src="//maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
   <!-- Favicons -->
   <link href="<?= $template_url; ?>/assets/img/favicons/favicon.ico" rel="shortcut icon">
