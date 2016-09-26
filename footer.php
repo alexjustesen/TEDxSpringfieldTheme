@@ -22,10 +22,6 @@
 
 <?php wp_footer(); ?>
 
-<!-- Compiled JS -->
-<script src="<?= $template_url; ?>/dist/js/vendor.min.js" type="text/javascript"></script>
-<script src="<?= $template_url; ?>/dist/js/application.min.js" type="text/javascript"></script>
-
 <!-- Live Reload -->
 <?php define('WP_ENV', 'development'); ?>
 <?php if (defined('WP_ENV') && WP_ENV !== 'production'): ?>

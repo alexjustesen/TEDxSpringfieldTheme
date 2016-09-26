@@ -1,8 +1,9 @@
-<?php
+<?php // functions.php
 require_once 'includes/controls/textarea_custom_control.php';
 
 //-- Theme Setup ------------------------------------------------------------
 require_once 'includes/theme_setup.php';
+require_once 'includes/theme/enqueue_scripts.php';
 require_once 'includes/theme/image_settings.php';
 require_once 'includes/theme/selective_menu_walker.php';
 require_once 'includes/theme/menus.php';
@@ -35,4 +36,3 @@ $SpeakerPostType = new SpeakerPostType();
 
 require_once 'includes/custom_post_types/schedule_items.php';
 $ScheduleItemsPostType = new ScheduleItemsPostType();
-
