@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    livereload = require('gulp-livereload'),
     tinylr = require('tiny-lr'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
@@ -94,14 +93,14 @@ gulp.task('fonts', function() {
 
 //-- Clean task to run before deploys ---------------------------------------
 gulp.task('clean', function() {
-  return gulp.src(['./dist/assets/css', './dist/assets/js'], {read: false})
+  return gulp.src(['./dist/assets/css', './dist/assets/js', './build/*'], {read: false})
     .pipe(clean());
 });
 
 
 //-- Zip task to run before deploying to wordpress
-gulp.task('zip', function() {
-    return gulp.src(['./**/*', '!./node_modules/**'])
+gulp.task('zip', function() {    
+    return gulp.src(['./**/*', '!./assets/**', '!./assets', '!./build/**', '!./build', '!./node_modules/**', '!./node_modules', '!./vendor/**', '!./vendor', '!./*.json', '!./Gulpfile.js'])
         .pipe(zip('TEDxSpringfieldTheme.zip'))
         .pipe(gulp.dest('build'));
 });
@@ -120,8 +119,8 @@ gulp.task('watch', function() {
   gulp.watch('./assets/js/**/*.js', ['scripts']);
   gulp.watch('./assets/img/**/*', ['images']);
 
-  livereload.listen();
-  gulp.watch(['./dist/**', './**/*.php']).on('change', livereload.changed);
+  //livereload.listen();
+  //gulp.watch(['./dist/**', './**/*.php']).on('change', livereload.changed);
 
 });
 

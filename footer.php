@@ -22,12 +22,6 @@
 
 <?php wp_footer(); ?>
 
-<!-- Live Reload -->
-<?php define('WP_ENV', 'development'); ?>
-<?php if (defined('WP_ENV') && WP_ENV !== 'production'): ?>
-  <script src="http://0.0.0.0:35729/livereload.js?snipver=1"></script>
-<?php endif; ?>
-
 <!-- 3rd Party Embeds -->
 <script>!function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
