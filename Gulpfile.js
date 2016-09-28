@@ -10,7 +10,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     clean = require('gulp-clean'),
     order = require('gulp-order'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    zip = require('gulp-zip'),
+    ignore = require('gulp-ignore');
 
 
 //-- Bower Dependencies -----------------------------------------------------
@@ -97,6 +99,14 @@ gulp.task('clean', function() {
 });
 
 
+//-- Zip task to run before deploying to wordpress
+gulp.task('zip', function() {
+    return gulp.src(['./**/*', '!./node_modules/**'])
+        .pipe(zip('TEDxSpringfieldTheme.zip'))
+        .pipe(gulp.dest('build'));
+});
+
+
 //-- Default Task -----------------------------------------------------------
 gulp.task('default', function() {
   gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'watch');
@@ -113,4 +123,12 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(['./dist/**', './**/*.php']).on('change', livereload.changed);
 
+});
+
+
+// -- Zip as WordPress theme package ----------------------------------------
+gulp.task('build', function() {
+    
+    gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'zip');
+    
 });
