@@ -447,12 +447,13 @@ footer {
   padding-bottom: 30px;
   font-size: 11px;
   color: #f6f6f6; }
-  footer .built-by {
-    display: inline-block;
-    vertical-align: bottom;
-    margin-bottom: 17px; }
   footer .web-partners {
-    font-size: 12px; }
+    font-size: 11px; }
+    footer .web-partners .built-by {
+      display: inline-block;
+      vertical-align: bottom;
+      margin-bottom: 17px;
+      font-size: 11px; }
     footer .web-partners a {
       display: inline-block; }
   footer .legal {

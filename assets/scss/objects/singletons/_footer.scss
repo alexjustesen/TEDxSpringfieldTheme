@@ -1,25 +1,26 @@
 footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-size: 11px;
-  color: $light-gray;
-
-  .built-by {
-    display: inline-block;
-    vertical-align: bottom;
-    margin-bottom: 17px;
-  }
-
-  .web-partners {
-    font-size: 12px;
-
-    a {
-      display: inline-block;
-    }
-  }
-
-  .legal {
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 11px;
-  }
+    color: $light-gray;
+
+    .web-partners {
+        font-size: 11px;
+        
+        .built-by {
+            display: inline-block;
+            vertical-align: bottom;
+            margin-bottom: 17px;
+            font-size: 11px;
+        }
+        
+        a {
+            display: inline-block;
+        }
+    }
+
+    .legal {
+        font-size: 11px;
+    }
 
 }
