@@ -18,7 +18,7 @@
       <div class="col-xs-12 col-sm-6 col-md-<?= $width ?> col-lg-<?= $width ?> talk-tile" data-remote="true" data-href="<?php the_permalink(); ?>">
         <div class="talk-photo-wrapper">
           <a class="talk-tile-container" href="<?= get_permalink($post->ID) ?>">
-            <img alt='<?php the_title(); ?>' src="http://img.youtube.com/vi/<?= $video_id; ?>/0.jpg" class="talk-photo">
+            <img alt='<?php the_title(); ?>' src="//img.youtube.com/vi/<?= $video_id; ?>/0.jpg" class="talk-photo">
           </a>
         </div>
         <div class="row">
