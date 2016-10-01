@@ -38,10 +38,14 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.0.1 (Sept 30, 2016)
+- Removed reference to http protocol in `shortcode_templates/taalk_shortcode.php` to support http and https
+- Updated `screenshot.png` to match current theme preview
+
 #### v1.0.0 (Sept 23, 2016)
 - Forked from TEDxTheme and renamed to TEDxSpringfieldTheme
 - Removed TWG and Jet Cooper images from `footer.php`
-- Added Built by 'Alex Justesen' to 'footer.php'
+- Added Built by 'Alex Justesen' to `footer.php`
 - Removed banner text and button from `page_templates/template_home.php`
 - Removed speaker video preview from `shortcode_templates/speaker_card_shortcode.php`
 - Removed related speaker video preview from `sidebar-speaker.php`
