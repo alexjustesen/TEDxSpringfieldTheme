@@ -121,7 +121,7 @@ class TeamPostType {
         if (has_post_thumbnail()) {
           the_post_thumbnail('thumb');
         } else {
-          echo "<img src='" . get_bloginfo('template_url') . "/images/defaults/team-thumb.jpg' width='139' height='150' />";
+          echo "<img src='" . get_bloginfo('template_url') . "/images/defaults/team-placeholder.jpg' width='139' height='150' />";
         }
         echo "</a>";
         break;
