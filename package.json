@@ -1,6 +1,6 @@
 {
   "name": "tedxspringfieldtheme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A TEDx WordPress theme built by The Working Group (http://twg.ca) and TEDxToronto and modified by Alex Justesen (http://alexjustesen.com).",
   "main": "Gulpfile.js",
   "dependencies": {

@@ -21,7 +21,7 @@ This theme has been designed and coded by [The Working Group](http://twg.ca) and
 ### Installation (Developers)
 
 * `cd /wordpress/wp-content`
-* `git clone git@github.com:twg/TEDxTheme.git`
+* `git clone git@github.com:alexjustesen/TEDxSpringfieldTheme.git`
 * Install the plugin dependencies:
     * [Advanced Custom Fields](http://www.advancedcustomfields.com/)
     * [Option Tree](https://wordpress.org/plugins/option-tree/)
@@ -33,13 +33,20 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 * `npm install` - Install development dependencies
 * `gulp watch` - Starts the Grunt task that builds css and js. Also has a livereload server running
+* `gulp clean` - Cleans out the build folder
+* `gulp build` - Builds the WordPress Theme zip file
 * `gulp vendor-js vendor-css` - Concats and minifies Bower dependencies into a single `plugin.min.js` file. These dependencies are declared in the `Gulpfile.js`. To add a new plugin we recommend installing it with Bower and then declaring it in the gulp file.
 
 
 ### Change Log
 
+#### v1.0.2 (Oct 3, 2016)
+- Corrected the team member placeholder in `includes/custom_post_types/team.php`
+- Corrected the text at the bottom of `footer.php` to meet the TEDx guidelines
+- Removed link to the legal notice in `footer.php`
+
 #### v1.0.1 (Sept 30, 2016)
-- Removed reference to http protocol in `shortcode_templates/taalk_shortcode.php` to support http and https
+- Removed reference to http protocol in `shortcode_templates/talk_shortcode.php` to support http and https
 - Updated `screenshot.png` to match current theme preview
 
 #### v1.0.0 (Sept 23, 2016)
