@@ -5,8 +5,8 @@
         <footer>
             <div class="row">
                 <div class="col-md-4 col-sm-12 legal">
-                    This TEDx event is independently organized.<br>
-                    Copyright © <?= get_theme_mod('event_name', 'TEDx') ?> <?= date("Y"); ?>. All Rights Reserved. <a href="/legal-and-privacy/">Legal &amp; Privacy</a>
+                    This independent TEDx event is operated under license from TED.<br>
+                    Copyright © <?= get_theme_mod('event_name', 'TEDx') ?> <?= date("Y"); ?>. All Rights Reserved.
                 </div>
                 <div class="col-md-3 col-sm-12">
                     <?= get_theme_mod('twitter_follow_button'); ?>
