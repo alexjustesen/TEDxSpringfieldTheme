@@ -167,5 +167,5 @@ bower_components/
 .bower-registry
 .bower-tmp
 build/
-node_modules/
 dist/
+node_modules/
