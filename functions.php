@@ -5,8 +5,10 @@ require_once 'includes/controls/textarea_custom_control.php';
 require_once 'includes/theme_setup.php';
 require_once 'includes/theme/enqueue_scripts.php';
 require_once 'includes/theme/image_settings.php';
-require_once 'includes/theme/selective_menu_walker.php';
-require_once 'includes/theme/menus.php';
+//require_once 'includes/theme/selective_menu_walker.php';
+// Register Custom Navigation Walker
+require_once 'includes/wp-bootstrap-navwalker.php';
+//require_once 'includes/theme/menus.php';
 
 //-- Utilities --------------------------------------------------------------
 require_once 'includes/renderer.php';

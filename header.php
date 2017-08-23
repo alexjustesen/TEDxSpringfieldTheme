@@ -68,54 +68,49 @@
                   <?php endif; ?>
               </span>
           </div>
-          
-          <div class="col-xs-12 hidden">
-            <div class="call-to-action">
-              <?php $button_callout_text = get_theme_mod('button_callout_text', 'CTA');?>
-              
-              <?php if(!empty($button_callout_text)): ?>
-                 <span>
-                     <span class="text-muted"><?= get_theme_mod('header_callout', 'Header Callout') ?></span>
-                     <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-sm btn-danger" target="_blank"><?= $button_callout_text ?></a>
-                 </span>                  
-              <?php endif;?>
-            </div>
-          </div>
         </div><!-- .row -->
-
-        <nav class="primary-nav" ng-controller="NavCtrl" ng-class="{'mobile-visible': isVisible}">
-          <div class="toggle visible-xs " ng-click="toggleMenu()">Menu</div>
-          <?= $TEDxMenus->primary_nav(); ?>
-        </nav>
-
       </header>
     </div>
   </div><!-- .black-bg -->
-
-  <?php if($TEDxMenus->show_secondary_nav()): ?>
-    <div class="primary-nav-secondary-container">
-      <div class="container ">
-        <nav class="primary-nav-secondary">
-          <?= $TEDxMenus->secondary_nav(); ?>
-        </nav>
-      </div>
-    </div>
-  <?php endif; ?>
-  
+    
     <?php if ( is_front_page() ) : ?>
-
     <div class="red-bg">
         <div class="container">
             <div class="row homepage-header-actions">
-                <div class="col-xs-12 col-md-6 col-lg-6 text-center">
-                    <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" class="btn btn-link btn-lg"><i class="fa fa-file-text-o fa-2x"></i><br/><?= $button_callout_text ?></a>
+                <div class="col-xs-12">
+                    <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" class="btn btn-link btn-lg pull-left"><i class="fa fa-file-text-o fa-2x"></i><br/><?= get_theme_mod( 'button_callout_text' ); ?></a>
                     <p class="text-white"><em><?= get_theme_mod('header_callout', 'Header Callout') ?></em></p>
-                </div>
-                <div class="col-xs-12 col-md-6 col-lg-6 text-center">
-                    <a href="" target="_blank" class="btn btn-link btn-lg"><i class="fa fa-mobile fa-2x"></i><br/>Download the Event App</a>
                 </div>
             </div>
         </div>
     </div>
     <?php endif; ?>
     
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand visible-xs-block"><?= bloginfo( 'name' ); ?></a>
+            </div>
+
+            <?php
+                wp_nav_menu( array(
+                    'menu'              => 'primary',
+                    'theme_location'    => 'primary',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'bs-example-navbar-collapse-1',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                    'walker'            => new wp_bootstrap_navwalker())
+                );
+            ?>
+        </div>
+    </nav>

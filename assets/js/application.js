@@ -1,5 +1,5 @@
 //-- Initialize -------------------------------------------------------------
-$(document).ready(function () {
+$( document ).ready( function () {    
   var team_tiles = $('.team-tile');
   if (team_tiles.length > 0) {
     $.each(team_tiles, function (index, value) {
@@ -32,6 +32,3 @@ function TeamTile(el) {
 
   this.init();
 }
-
-//-- Migrating to Angular ---------------------------------------------------
-angular.module('TEDxTheme', []);

@@ -45,10 +45,14 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - New: Header design to include social links for Facebook, Instagram and Twitter
 - New: Moved call to action button/text to large section below the header
 - New: Created a new call to action button/text for app download
+- New: Navigation bar and menu walker
 - Fixed: logo anchor to use `home_url()` instead of a custom function
 - Removed: DNS prefetch from `header.php` in favor of using a plugin
 - Removed: Twitter button and widget JS from `footer.php`
 - Removed: WP customize option for twitter button code
+- Removed: Support for AngularJS
+- Removed: Selective menu walker
+- Updated: `.gitignore` to include the `vendor` directory
 
 #### v1.0.2 (Oct 3, 2016)
 - Corrected the team member placeholder in `includes/custom_post_types/team.php`
