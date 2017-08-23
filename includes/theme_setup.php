@@ -187,35 +187,55 @@ function tedx_customize_register ($wp_customize) {
       'title'    => __('TEDx Social', 'tedx'),
       'priority' => 2147483631
     ));
-
+    
+    //Facebook URL
   $wp_customize->add_setting(
-    'twitter_follow_button',
+    'facebook_url',
+      array(
+        'default'   => '',
+          'transport' => 'refresh'
+      )
+  );
+    
+    $wp_customize->add_control(
+        'tedx_social_facebook_url', 
+        array(
+            'priority'      => 1,
+            'label'         => __('Facebook URL', 'tedx'),
+            'section'       => 'tedx_social',
+            'settings'      => 'facebook_url',
+            'type'          => 'text'
+        )
+    );
+    
+    //Instagram Account
+  $wp_customize->add_setting(
+    'instagram_account',
     array(
-      'default'   => '<a href="https://twitter.com/twg" class="twitter-follow-button" data-show-count="false">Follow @twg</a>',
+      'default'   => '',
       'transport' => 'refresh',
     ));
-
   $wp_customize->add_control(
-    'tedx_social_twitter_follow_button',
+    'tedx_social_instagram_account',
     array(
-      'priority' => 8,
-      'label'    => __('Twitter Follow Button', 'tedx'),
+      'priority' => 2,
+      'label'    => __('Instagram Account', 'tedx'),
       'section'  => 'tedx_social',
-      'settings' => 'twitter_follow_button',
+      'settings' => 'instagram_account',
       'type'     => 'text'
     ));
 
-
+    //Twitter Account
   $wp_customize->add_setting(
     'twitter_account',
     array(
-      'default'   => '@twg',
+      'default'   => '',
       'transport' => 'refresh',
     ));
   $wp_customize->add_control(
     'tedx_social_twitter_account',
     array(
-      'priority' => 7,
+      'priority' => 3,
       'label'    => __('Twitter Account', 'tedx'),
       'section'  => 'tedx_social',
       'settings' => 'twitter_account',

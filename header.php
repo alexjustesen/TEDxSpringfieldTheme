@@ -40,22 +40,41 @@
       <header>
 
         <div class="row">
-          <div class="col-xs-12 col-lg-6">
-            <a href="<?= home_url(); ?>">
+         
+          <div class="col-xs-12 col-md-3 col-lg-3">
               <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
-              <img src="<?= $logo ?>" alt="Logo" class="pull-left img-responsive">
-            </a>
-            <div class="header-date-location pull-left">
-              <time class="date"><?= get_theme_mod('event_date', 'Event Date') ?></time>
-              <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
-            </div>
+              <a href="<?= home_url(); ?>" target="_self">
+                  <img src="<?= $logo ?>" alt="Logo" class="img-responsive">
+              </a>
           </div>
-          <div class="col-xs-12 col-lg-6">
+          
+          <div class="col-xs-12 col-md-6 col-lg-6">
+              <div class="header-date-location">
+                  <time class="date"><?= get_theme_mod('event_date', 'Event Date') ?></time>
+                  <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
+              </div>
+          </div>
+          
+          <div class="col-xs-12 col-md-3 col-lg-3">
+              <span class="pull-right social-links">
+                  <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
+                      <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link"><i class="fa fa-2x fa-facebook"></i></a>
+                  <?php endif; ?>
+                  <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
+                      <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link"><i class="fa fa-2x fa-instagram"></i></a>
+                  <?php endif; ?>
+                  <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
+                      <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link"><i class="fa fa-2x fa-twitter"></i></a>
+                  <?php endif; ?>
+              </span>
+          </div>
+          
+          <div class="col-xs-12 hidden">
             <div class="call-to-action">
               <?php $button_callout_text = get_theme_mod('button_callout_text', 'CTA');?>
               
               <?php if(!empty($button_callout_text)): ?>
-                 <span class="pull-right">
+                 <span>
                      <span class="text-muted"><?= get_theme_mod('header_callout', 'Header Callout') ?></span>
                      <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-sm btn-danger" target="_blank"><?= $button_callout_text ?></a>
                  </span>                  
@@ -82,3 +101,21 @@
       </div>
     </div>
   <?php endif; ?>
+  
+    <?php if ( is_front_page() ) : ?>
+
+    <div class="red-bg">
+        <div class="container">
+            <div class="row homepage-header-actions">
+                <div class="col-xs-12 col-md-6 col-lg-6 text-center">
+                    <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" class="btn btn-link btn-lg"><i class="fa fa-file-text-o fa-2x"></i><br/><?= $button_callout_text ?></a>
+                    <p class="text-white"><em><?= get_theme_mod('header_callout', 'Header Callout') ?></em></p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-6 text-center">
+                    <a href="" target="_blank" class="btn btn-link btn-lg"><i class="fa fa-mobile fa-2x"></i><br/>Download the Event App</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+    
