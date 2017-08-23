@@ -41,9 +41,14 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 ### Change Log
 
 #### v1.1.0 (in development)
-- New video card design for featured/past talks
-- Removed DNS prefetch from `header.php` in favor of using a plugin
-- Fixed logo anchor to use `home_url()` instead of a custom function
+- New: Video card design for featured/past talks
+- New: Header design to include social links for Facebook, Instagram and Twitter
+- New: Moved call to action button/text to large section below the header
+- New: Created a new call to action button/text for app download
+- Fixed: logo anchor to use `home_url()` instead of a custom function
+- Removed: DNS prefetch from `header.php` in favor of using a plugin
+- Removed: Twitter button and widget JS from `footer.php`
+- Removed: WP customize option for twitter button code
 
 #### v1.0.2 (Oct 3, 2016)
 - Corrected the team member placeholder in `includes/custom_post_types/team.php`
