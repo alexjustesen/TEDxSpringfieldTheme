@@ -1,47 +1,35 @@
 <section>
+   
+    <div class="row">
+    
+    <?php if ( $talks->have_posts() ) : while ( $talks->have_posts() ) : $talks->the_post(); ?>
+    
+        <?php
+            $post         = get_post();
+            $video_id     = get_post_meta($post->ID, '_talk_video_id', true);
+            $speaker_name = get_post_meta($post->ID, '_talk_speaker_name', true);
+            $speaker_role = get_post_meta($post->ID, '_talk_speaker_role', true);
+            $width        = ($for_homepage) ? "4" : "3";
+        ?>
+    
+        <div class="col-xs-12 col-md-6 col-lg-<?= $width; ?>">
 
-  <?php if (!empty($title) && !$for_homepage): ?>
-    <header>
-      <h2 class="minor"><?= $title ?> </h2>
-    </header>
-  <?php endif; ?>
-
-  <div class="row animated-tiles">
-    <?php if ($talks->have_posts()): while ($talks->have_posts()) : $talks->the_post(); ?>
-      <?php
-      $post         = get_post();
-      $video_id     = get_post_meta($post->ID, '_talk_video_id', true);
-      $speaker_name = get_post_meta($post->ID, '_talk_speaker_name', true);
-      $speaker_role = get_post_meta($post->ID, '_talk_speaker_role', true);
-      $width        = ($for_homepage) ? "4" : "3";
-      ?>
-      <div class="col-xs-12 col-sm-6 col-md-<?= $width ?> col-lg-<?= $width ?> talk-tile" data-remote="true" data-href="<?php the_permalink(); ?>">
-        <div class="talk-photo-wrapper">
-          <a class="talk-tile-container" href="<?= get_permalink($post->ID) ?>">
-            <img alt='<?php the_title(); ?>' src="//img.youtube.com/vi/<?= $video_id; ?>/0.jpg" class="talk-photo">
-          </a>
+            <div class="thumbnail">
+                <img src="//img.youtube.com/vi/<?= $video_id; ?>/0.jpg" alt="<?= the_title(); ?>">
+                <div class="caption">
+                    <h4 class="truncate" title="<?= the_title(); ?>"><?= the_title(); ?></h4>
+                    <p><?= $speaker_name; ?></p>
+                    <p>
+                        <a href="<?= get_permalink($post->ID) ?>" class="btn btn-danger" role="button"><i class="fa fa-play fa-fw"></i> Watch</a>
+                        <span class="pull-right"><small>Talk Year: <?php single_term($post, 'talk_years'); ?></small></span>
+                    </p>
+                </div>
+            </div>
+    
         </div>
-        <div class="row">
-          <div class="col-md-6 talk-meta">
-            <?php single_term($post, 'talk_types'); ?>
-          </div>
-          <div class="col-md-6 talk-meta">
-            <span class="pull-right"><?php single_term($post, 'talk_years'); ?></span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 ">
-            <a class="talk-tile-container" href="<?= get_permalink($post->ID) ?>">
-              <?= $speaker_name ?>
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 talk-meta talk-speaker-role">
-            <?= $speaker_role ?>
-          </div>
-        </div>
-      </div>
+    
     <?php endwhile; endif; ?>
-  </div>
+    
+    </div>
+    
 </section>

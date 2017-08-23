@@ -18,9 +18,6 @@
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
   <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-  
-  <!-- DNS Prefetch -->
-  <link href="//www.google-analytics.com" rel="dns-prefetch">
 
   <?php wp_head(); ?>
   
@@ -43,25 +40,26 @@
       <header>
 
         <div class="row">
-          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-            <a href="<?= get_theme_mod('logo_link', '/'); ?>">
-              <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = 'http://placehold.it/229x50.png' ?>
-              <img src="<?= $logo ?>" height="50" width="229" alt="Logo" class="pull-left">
+          <div class="col-xs-12 col-lg-6">
+            <a href="<?= home_url(); ?>">
+              <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
+              <img src="<?= $logo ?>" alt="Logo" class="pull-left img-responsive">
             </a>
             <div class="header-date-location pull-left">
-              <time class="date" datetime="2014-10-02"><?= get_theme_mod('event_date', 'Event Date') ?></time>
+              <time class="date"><?= get_theme_mod('event_date', 'Event Date') ?></time>
               <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-xs-12 col-lg-6">
             <div class="call-to-action">
-
               <?php $button_callout_text = get_theme_mod('button_callout_text', 'CTA');?>
-
+              
               <?php if(!empty($button_callout_text)): ?>
-              <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-danger pull-right"><?= $button_callout_text ?></a>
+                 <span class="pull-right">
+                     <span class="text-muted"><?= get_theme_mod('header_callout', 'Header Callout') ?></span>
+                     <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" class="btn btn-sm btn-danger" target="_blank"><?= $button_callout_text ?></a>
+                 </span>                  
               <?php endif;?>
-              <span class="copy pull-right clear"><?= get_theme_mod('header_callout', 'Header Callout') ?></span>
             </div>
           </div>
         </div><!-- .row -->
@@ -72,10 +70,8 @@
         </nav>
 
       </header>
-
     </div>
   </div><!-- .black-bg -->
-
 
   <?php if($TEDxMenus->show_secondary_nav()): ?>
     <div class="primary-nav-secondary-container">

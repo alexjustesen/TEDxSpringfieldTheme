@@ -12,6 +12,7 @@
             //enqueue css files
             wp_enqueue_style( 'vendor', get_template_directory_uri() . '/dist/css/vendor.min.css', array(), '1.0.0', 'all' );
             wp_enqueue_style( 'application', get_template_directory_uri() . '/dist/css/application.min.css', array(), '1.0.0', 'all' );
+            wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
         }
 
         add_action( 'wp_enqueue_scripts', 'TEDx_scripts' );

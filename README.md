@@ -40,6 +40,11 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.1.0 (in development)
+- New video card design for featured/past talks
+- Removed DNS prefetch from `header.php` in favor of using a plugin
+- Fixed logo anchor to use `home_url()` instead of a custom function
+
 #### v1.0.2 (Oct 3, 2016)
 - Corrected the team member placeholder in `includes/custom_post_types/team.php`
 - Corrected the text at the bottom of `footer.php` to meet the TEDx guidelines
