@@ -10,7 +10,7 @@
             if (is_array($thumb) && !empty($thumb[0])) {
                 $thumbnail_src = $thumb[0];
             } else {
-                $thumbnail_src = get_bloginfo('template_url') . "/images/defaults/team-placeholder.jpg";
+                $thumbnail_src = get_bloginfo('template_url') . "/dist/img/defaults/team-placeholder.jpg";
             }
         ?>
         

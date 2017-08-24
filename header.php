@@ -30,21 +30,21 @@
 
         <div class="row">
          
-          <div class="col-xs-12 col-md-3 col-lg-3">
+          <div class="col-xs-12 col-md-3 col-lg-3 hidden-xs hidden-sm">
               <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
               <a href="<?= home_url(); ?>" target="_self">
                   <img src="<?= $logo ?>" alt="Logo" class="img-responsive">
               </a>
           </div>
           
-          <div class="col-xs-12 col-md-6 col-lg-6">
+          <div class="col-xs-6 col-md-6 col-lg-6">
               <div class="header-date-location">
                   <time class="date"><?= get_theme_mod('event_date', 'Event Date') ?></time>
                   <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
               </div>
           </div>
           
-          <div class="col-xs-12 col-md-3 col-lg-3">
+          <div class="col-xs-6 col-md-3 col-lg-3">
               <span class="pull-right social-links">
                   <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
                       <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
@@ -85,7 +85,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand visible-xs-block"><?= bloginfo( 'name' ); ?></a>
+                <a href="<?= home_url(); ?>" class="navbar-brand visible-xs-block"><?= bloginfo( 'name' ); ?></a>
             </div>
 
             <?php
