@@ -1,8 +1,5 @@
 //-- Initialize -------------------------------------------------------------
-$( document ).ready( function () {
-    console.log('Document on ready triggered');
-    $( '.slide-down' ).slideDown(1000);
-    
+$( document ).ready( function () {    
   var team_tiles = $('.team-tile');
   if (team_tiles.length > 0) {
     $.each(team_tiles, function (index, value) {

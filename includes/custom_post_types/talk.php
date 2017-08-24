@@ -103,7 +103,7 @@ class TalkPostType {
       'public'               => true,
       'publicly_queryable'   => true,
       'show_ui'              => true,
-      'menu_icon'            => get_stylesheet_directory_uri() . '/images/custom_post_types/talk.png',
+      'menu_icon'            => get_stylesheet_directory_uri() . '/dist/img/custom_post_types/talk.png',
       'show_in_menu'         => true,
       'query_var'            => true,
       'rewrite'              => array('slug' => 'talks', 'with_front' => false),

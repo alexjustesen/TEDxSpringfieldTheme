@@ -3,11 +3,11 @@
   "version": "1.0.2",
   "homepage": "https://github.com/alexjustesen/TEDxSpringfieldTheme",
   "authors": [
-      {
-        "name": "Alex Justesen",
-        "email": "alex@alexjustesen.com",
-        "homepage": "http://alexjustesen.com"
-      }
+    {
+      "name": "Alex Justesen",
+      "email": "alex@alexjustesen.com",
+      "homepage": "http://alexjustesen.com"
+    }
   ],
   "license": "MIT",
   "private": true,
@@ -23,7 +23,8 @@
     "bootstrap-sass-official": "~3.3.7",
     "bootstrap": "~3.3.7",
     "font-awesome": "~4.6.3",
-    "animate.css": "~3.5.2"
+    "animate.css": "~3.5.2",
+    "shave": "^2.0.4"
   },
   "description": "",
   "main": ""

@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 var bowerJsDependencies = [
   './vendor/jquery/dist/jquery.js',
   './vendor/bootstrap/dist/js/bootstrap.js',
-  './vendor/angular/angular.js'
+  './vendor/shave/dist/shave.js'
 ];
 var bowerCssDependencies = [
   './vendor/bootstrap/dist/css/bootstrap.css',
@@ -86,14 +86,14 @@ gulp.task('images', function() {
 
 //-- Copy Fonts to the Dist Directory ---------------------------------------
 gulp.task('fonts', function() {
-  return gulp.src('./vendor/font-awesome/fonts/**/*.*')
+  return gulp.src(['./vendor/font-awesome/fonts/**/*.*', './vendor/bootstrap/fonts/**/*.*'])
     .pipe(gulp.dest('./dist/fonts'));
 });
 
 
 //-- Clean task to run before deploys ---------------------------------------
 gulp.task('clean', function() {
-  return gulp.src(['./dist/assets/css', './dist/assets/js', './build/*'], {read: false})
+  return gulp.src(['./dist/css/*', './dist/fonts/*', './dist/img/*','./dist/js/*', './build/*'], {read: false})
     .pipe(clean());
 });
 
@@ -102,32 +102,17 @@ gulp.task('clean', function() {
 gulp.task('zip', function() {    
     return gulp.src(['./**/*', '!./assets/**', '!./assets', '!./build/**', '!./build', '!./node_modules/**', '!./node_modules', '!./vendor/**', '!./vendor', '!./*.json', '!./Gulpfile.js'])
         .pipe(zip('TEDxSpringfieldTheme.zip'))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('./build'));
 });
 
 
 //-- Default Task -----------------------------------------------------------
 gulp.task('default', function() {
-  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'watch');
-});
-
-
-//-- Watching & Livereload --------------------------------------------------
-gulp.task('watch', function() {
-
-  gulp.watch('./assets/scss/**/*.scss', ['styles']);
-  gulp.watch('./assets/js/**/*.js', ['scripts']);
-  gulp.watch('./assets/img/**/*', ['images']);
-
-  //livereload.listen();
-  //gulp.watch(['./dist/**', './**/*.php']).on('change', livereload.changed);
-
+  gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts');
 });
 
 
 // -- Zip as WordPress theme package ----------------------------------------
-gulp.task('build', function() {
-    
-    gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'zip');
-    
+gulp.task('package', function() {
+    gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'zip');    
 });

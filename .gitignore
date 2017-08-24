@@ -167,6 +167,5 @@ bower_components/
 .bower-registry
 .bower-tmp
 build/
-dist/
 node_modules/
 vendor/

@@ -25,6 +25,7 @@
     "gulp-scss": "^1.4.0",
     "gulp-uglify": "^0.3.0",
     "gulp-zip": "^3.2.0",
+    "shave": "^2.0.4",
     "tiny-lr": "0.0.7"
   },
   "scripts": {

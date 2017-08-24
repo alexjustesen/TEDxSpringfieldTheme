@@ -1,6 +1,5 @@
 <?php
-  global $TEDxMenus;
-  $template_url = get_template_directory_uri();
+    $template_url = get_template_directory_uri();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js" ng-app="TEDxTheme">
@@ -12,28 +11,18 @@
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
   <!-- Favicons -->
-  <link href="<?= $template_url; ?>/assets/img/favicons/favicon.ico" rel="shortcut icon">
-  <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
-  <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
-  <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="<?= $template_url; ?>/assets/img/favicons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="<?= $template_url; ?>/dist/img/favicons/favicon.ico" rel="shortcut icon">
+  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
+  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
 
   <?php wp_head(); ?>
   
 </head>
 
 <body <?php body_class(); ?>>
-
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=230769680405348&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
   <div class="black-bg">
     <div class="container">

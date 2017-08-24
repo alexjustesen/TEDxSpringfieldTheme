@@ -43,7 +43,7 @@ class PartnerPostType {
       'public' => true,
       'publicly_queryable' => true,
       'show_ui' => true,
-      'menu_icon' => get_stylesheet_directory_uri() . '/images/custom_post_types/partner.png',
+      'menu_icon' => get_stylesheet_directory_uri() . '/dist/img/custom_post_types/partner.png',
       'show_in_menu' => true,
       'query_var' => true,
       'rewrite' => array('slug' => 'partners-archive', 'with_front' => false),

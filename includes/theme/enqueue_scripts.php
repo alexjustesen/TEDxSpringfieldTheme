@@ -1,20 +1,20 @@
-<?php
-    if (!function_exists('TEDx_scripts')) :
-        function TEDx_scripts() {
+<?php // includes/theme/enqueue_scripts.php
 
-            // deregister the jquery version bundled with wordpress
-            wp_deregister_script( 'jquery' );
+if (!function_exists('TEDx_scripts')) :
+    function TEDx_scripts() {
 
-            // enqueue javascript files    
-            wp_enqueue_script( 'vendor', get_template_directory_uri() . '/dist/js/vendor.min.js', array(), '1.0.0', true );            
-            wp_enqueue_script( 'application', get_template_directory_uri() . '/dist/js/application.min.js', array(), '1.0.0', true );
+        // deregister the jquery version bundled with wordpress
+        wp_deregister_script( 'jquery' );
 
-            //enqueue css files
-            wp_enqueue_style( 'vendor', get_template_directory_uri() . '/dist/css/vendor.min.css', array(), '1.0.0', 'all' );
-            wp_enqueue_style( 'application', get_template_directory_uri() . '/dist/css/application.min.css', array(), '1.0.0', 'all' );
-            wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
-        }
+        // enqueue javascript files    
+        wp_enqueue_script( 'vendor', get_template_directory_uri() . '/dist/js/vendor.min.js', array(), '1.1.0', true );            
+        wp_enqueue_script( 'application', get_template_directory_uri() . '/dist/js/application.min.js', array(), '1.1.0', true );
 
-        add_action( 'wp_enqueue_scripts', 'TEDx_scripts' );
-    endif;
+        //enqueue css files
+        wp_enqueue_style( 'vendor', get_template_directory_uri() . '/dist/css/vendor.min.css', array(), '1.1.0', 'all' );
+        wp_enqueue_style( 'application', get_template_directory_uri() . '/dist/css/application.min.css', array(), '1.1.0', 'all' );
+    }
+
+    add_action( 'wp_enqueue_scripts', 'TEDx_scripts' );
+endif;
     

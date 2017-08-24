@@ -43,7 +43,7 @@ class TeamPostType {
       'public'               => true,
       'publicly_queryable'   => true,
       'show_ui'              => true,
-      'menu_icon'            => get_stylesheet_directory_uri() . '/images/custom_post_types/team.png',
+      'menu_icon'            => get_stylesheet_directory_uri() . '/dist/img/custom_post_types/team.png',
       'show_in_menu'         => true,
       'query_var'            => true,
       'rewrite'              => array('slug' => 'teams', 'with_front' => false),
@@ -121,7 +121,7 @@ class TeamPostType {
         if (has_post_thumbnail()) {
           the_post_thumbnail('thumb');
         } else {
-          echo "<img src='" . get_bloginfo('template_url') . "/images/defaults/team-placeholder.jpg' width='139' height='150' />";
+          echo "<img src='" . get_bloginfo('template_url') . "/dist/img/defaults/team-placeholder.jpg' width='139' height='150' />";
         }
         echo "</a>";
         break;
