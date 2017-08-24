@@ -110,9 +110,3 @@ gulp.task('zip', function() {
 gulp.task('default', function() {
   gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts');
 });
-
-
-// -- Zip as WordPress theme package ----------------------------------------
-gulp.task('package', function() {
-    gulp.start('styles', 'scripts', 'vendor-css', 'vendor-js', 'images', 'fonts', 'zip');    
-});

@@ -47,13 +47,13 @@
           <div class="col-xs-12 col-md-3 col-lg-3">
               <span class="pull-right social-links">
                   <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
-                      <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link"><i class="fa fa-2x fa-facebook"></i></a>
+                      <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
                   <?php endif; ?>
                   <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
-                      <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link"><i class="fa fa-2x fa-instagram"></i></a>
+                      <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
                   <?php endif; ?>
                   <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
-                      <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link"><i class="fa fa-2x fa-twitter"></i></a>
+                      <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
                   <?php endif; ?>
               </span>
           </div>
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row homepage-header-actions">
                 <div class="col-xs-12">
-                    <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" class="btn btn-link btn-lg pull-left"><i class="fa fa-file-text-o fa-2x"></i><br/><?= get_theme_mod( 'button_callout_text' ); ?></a>
+                    <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" rel="noopener" class="btn btn-link btn-lg pull-left"><i class="fa fa-file-text-o fa-2x"></i><br/><?= get_theme_mod( 'button_callout_text' ); ?></a>
                     <p class="text-white"><em><?= get_theme_mod('header_callout', 'Header Callout') ?></em></p>
                 </div>
             </div>

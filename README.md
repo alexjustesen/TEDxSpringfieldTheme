@@ -43,8 +43,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 * `bower install` - Install packages to `./vendor` directory.
 * `gulp default` - Is the default Gulp function that compiles and moves all the site assets to the `./dist` directory.
 * `gulp clean` - Cleans out the build and dist folders.
-* `gulp package` - Packages the WordPress Theme zip file.
-* `gulp vendor-js vendor-css` - Concats and minifies Bower dependencies into a single `vendor.min.js` and `vendor.min.css` file. These dependencies are declared in the `Gulpfile.js`. To add a new plugin install it with Bower and then declare it in the gulp file.
+* `gulp zip` - Packages the WordPress Theme zip file. !IMPORTANT make sure to run `gulp default` first to build the `./dist` directory.
 
 
 ### Change Log
@@ -56,11 +55,10 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - New: Moved call to action button/text to large section below the header
 - New: Created a new call to action button/text for app download
 - New: Navigation bar and menu walker
-- Changed: Gulp `build` to `package` to handle creating the theme zip file
 - Fixed: `.gitirnore` to exclude the `./vendor` directory
-- Fixed: Gulp `images` function to move all images for frontend and admin
-- Fixed: Gulp `clean`, was referencing an invalid directory
-- Fixed: Gulp `fonts`, was missing reference to Bootstrap fonts
+- Fixed: `gulp images` function to move all images for frontend and admin
+- Fixed: `gulp clean`, was referencing an invalid directory
+- Fixed: `gulp fonts`, was missing reference to Bootstrap fonts
 - Fixed: logo anchor to use `home_url()` instead of a custom function
 - Removed: DNS prefetch from `header.php` in favor of using a plugin
 - Removed: Twitter button and widget JS from `footer.php`
@@ -68,9 +66,11 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Removed: WP customize option for twitter button code
 - Removed: Support for AngularJS
 - Removed: Selective menu walker
-- Removed: Gulp `watch` function
-- Updated: `.gitignore` to include the `vendor` directory
+- Removed: `gulp watch` function
+- Removed: `gulp package` function, use `gulp zip` instead
+- Updated: `.gitignore` to exclude the `./vendor` directory
 - Updated: jQuery package to v3.2.1
+- Updated: `screenshot.png` to `screenshot.jpg` to save space and to a newer image
 
 #### v1.0.2 (Oct 3, 2016)
 - Corrected the team member placeholder in `includes/custom_post_types/team.php`
