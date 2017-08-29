@@ -74,6 +74,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Updated: `.gitignore` to exclude the `./vendor` directory
 - Updated: jQuery package to v3.2.1
 - Updated: `screenshot.png` to `screenshot.jpg` to save space and to a newer image
+- Updated: `footer.php` UI and added reference to GitHub repo for download
 
 #### v1.0.2 (Oct 3, 2016)
 - Corrected the team member placeholder in `includes/custom_post_types/team.php`
