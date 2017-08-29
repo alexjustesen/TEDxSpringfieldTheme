@@ -52,12 +52,11 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Added: `dollarshaveclub/shave` package to bower for text truncation
 - New: Video card design for featured/past talks
 - New: Header design to include social links for Facebook, Instagram and Twitter
-- New: Moved call to action button/text to large section below the header
-- New: Created a new call to action button/text for app download
+- New: Created a new call to action in the header
 - New: Navigation bar and menu walker
-- New: `searchform.php` created to cleanup the UI
+- New: Search form
 - New: Implemented `shave()` js function to truncate text where needed
-- New: Overhauled `single-speaker.php` to new UI style and added admin partials
+- New: Speaker profile
 - Fixed: `.gitirnore` to exclude the `./vendor` directory
 - Fixed: `gulp images` function to move all images for frontend and admin
 - Fixed: `gulp clean`, was referencing an invalid directory
@@ -65,6 +64,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Fixed: logo anchor to use `home_url()` instead of a custom function
 - Fixed: js scrollup function
 - Removed: DNS prefetch from `header.php` in favor of using a plugin
+- Removed: Facebook and Twitter share buttons from speaker profiles, recommend using a plugin instead
 - Removed: Twitter button and widget JS from `footer.php`
 - Removed: Facebook sdk from `header.php`
 - Removed: WP customize option for twitter button code
@@ -74,7 +74,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Removed: `gulp package` function, use `gulp zip` instead
 - Updated: `.gitignore` to exclude the `./vendor` directory
 - Updated: jQuery package to v3.2.1
-- Updated: `screenshot.png` to `screenshot.jpg` to save space and to a newer image
+- Updated: `screenshot.png` to `screenshot.jpg` to reduce theme package size
 - Updated: `footer.php` UI and added reference to GitHub repo for download
 
 #### v1.0.2 (Oct 3, 2016)
