@@ -57,6 +57,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - New: Navigation bar and menu walker
 - New: `searchform.php` created to cleanup the UI
 - New: Implemented `shave()` js function to truncate text where needed
+- New: Overhauled `single-speaker.php` to new UI style and added admin partials
 - Fixed: `.gitirnore` to exclude the `./vendor` directory
 - Fixed: `gulp images` function to move all images for frontend and admin
 - Fixed: `gulp clean`, was referencing an invalid directory

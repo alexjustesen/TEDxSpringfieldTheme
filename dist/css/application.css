@@ -299,10 +299,6 @@ table.event-listing {
   width: 270px;
   height: 270px; }
 
-body.single-speaker .social-twitter {
-  position: relative;
-  top: 7px; }
-
 body.single-speaker .related-speaker-tile {
   padding-bottom: 10px; }
   body.single-speaker .related-speaker-tile img {
@@ -311,7 +307,6 @@ body.single-speaker .related-speaker-tile {
     text-transform: uppercase;
     font-size: 11px; }
   body.single-speaker .related-speaker-tile .related-speaker-position {
-    text-transform: uppercase;
     font-size: 11px; }
 
 body.single-talk .social-twitter {
@@ -875,3 +870,6 @@ ul.page-numbers {
 
 .scrollup:hover {
   cursor: pointer; }
+
+.single-speaker-container a.btn-link {
+  color: #666; }

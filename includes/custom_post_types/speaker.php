@@ -3,10 +3,13 @@
 class SpeakerPostType {
 
   public $custom_fields = array(
+    '_speaker_email_address',
+    '_speaker_instagram_id',
+    '_speaker_linkedin_url',
+    '_speaker_twitter_id',
     '_speaker_video_id',
-    '_speaker_website_url',
     '_speaker_video_description',
-    '_speaker_twitter_link'
+    '_speaker_website_url'
   );
 
   function __construct () {
@@ -149,10 +152,13 @@ class SpeakerPostType {
   }
 
   function add_meta_boxes () {
-    add_meta_box('speaker_website_url', 'Website URL', array($this, 'render_website_meta_boxes'), 'speaker', 'normal', 'high');
+    add_meta_box('speaker_email_address', 'Email Address', array($this, 'render_email_address_meta_boxes'), 'speaker', 'normal', 'high');
+    add_meta_box('speaker_instagram_id', 'Instagram ID', array($this, 'render_instagram_meta_boxes'), 'speaker', 'normal', 'high');
+    add_meta_box('speaker_linkedin_url', 'LinkedIn URL', array($this, 'render_linkedin_meta_boxes'), 'speaker', 'normal', 'high');
+    add_meta_box('speaker_twitter_id', 'Twitter ID', array($this, 'render_speaker_twitter_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_video_id', 'Video ID', array($this, 'render_video_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_video_description', 'Video Description', array($this, 'render_video_description_boxes'), 'speaker', 'normal', 'high');
-    add_meta_box('speaker_speaker_twitter_link', 'Twitter Link', array($this, 'render_speaker_twitter_meta_boxes'), 'speaker', 'normal', 'high');
+    add_meta_box('speaker_website_url', 'Website URL', array($this, 'render_website_meta_boxes'), 'speaker', 'normal', 'high');
   }
 
   function force_active_state ($classes, $item, $args) {
@@ -161,6 +167,30 @@ class SpeakerPostType {
     }
 
     return $classes;
+  }
+    
+  function render_email_address_meta_boxes () {
+    WP_Render::partial(
+      'partials/admin/speaker/_email_address.php',
+      [
+        'speaker_email_address' => get_post_meta(get_the_ID(), '_speaker_email_address', true)
+      ]);
+  }
+    
+  function render_instagram_meta_boxes () {
+    WP_Render::partial(
+      'partials/admin/speaker/_instagram_id.php',
+      [
+        'speaker_instagram_id' => get_post_meta(get_the_ID(), '_speaker_instagram_id', true)
+      ]);
+  }
+    
+  function render_linkedin_meta_boxes () {
+    WP_Render::partial(
+      'partials/admin/speaker/_linkedin_url.php',
+      [
+        'speaker_linkedin_url' => get_post_meta(get_the_ID(), '_speaker_linkedin_url', true)
+      ]);
   }
 
   function render_video_meta_boxes () {
@@ -173,9 +203,9 @@ class SpeakerPostType {
 
   function render_speaker_twitter_meta_boxes () {
     WP_Render::partial(
-      'partials/admin/speaker/_twitter_link.php',
+      'partials/admin/speaker/_twitter_id.php',
       [
-        'speaker_twitter_link' => get_post_meta(get_the_ID(), '_speaker_twitter_link', true)
+        'speaker_twitter_id' => get_post_meta(get_the_ID(), '_speaker_twitter_id', true)
       ]);
   }
 
@@ -268,7 +298,12 @@ class SpeakerPostType {
           if (!current_user_can('edit_post', $post_id)) {
             return;
           } else {
-            update_post_meta($post_id, $field, $_POST[$field]);
+              //if( $field == '_speaker_email_address' ) {
+                //  update_post_meta( $post_id, sanitize_email( $_POST[$field] ) );
+              //}
+              //else { 
+                  update_post_meta($post_id, $field, $_POST[$field]);
+             //}
           }
         }
       }
@@ -464,10 +499,10 @@ class SpeakerPostType {
     }
   }
 
-  function get_twitter_link ($slug) {
+  function get_twitter_id ($slug) {
     $speaker = $this->get_speaker_by_slug($slug);
     if ($speaker) {
-      return get_post_meta($speaker->ID, '_speaker_twitter_link', true);
+      return get_post_meta($speaker->ID, '_speaker_twitter_id', true);
     } else {
       return false;
     }
