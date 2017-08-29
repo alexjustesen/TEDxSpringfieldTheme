@@ -863,11 +863,6 @@ ul.page-numbers {
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
 .homepage-header-actions {
   padding-top: 25px;
   padding-bottom: 25px; }
@@ -877,3 +872,6 @@ ul.page-numbers {
 
 .text-white {
   color: #ffffff; }
+
+.scrollup:hover {
+  cursor: pointer; }

@@ -23,6 +23,8 @@ $( document ).ready( function () {
     });
 });
 
+//-- Initiate Shave Classes -------------------------------------------------
+shave( '.talk-shortcode .caption .shave', 26);
 
 //-- TeamTile Class ---------------------------------------------------------
 function TeamTile(el) {
