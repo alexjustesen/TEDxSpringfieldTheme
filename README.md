@@ -55,6 +55,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - New: Moved call to action button/text to large section below the header
 - New: Created a new call to action button/text for app download
 - New: Navigation bar and menu walker
+- New: `searchform.php` created to cleanup the UI
 - Fixed: `.gitirnore` to exclude the `./vendor` directory
 - Fixed: `gulp images` function to move all images for frontend and admin
 - Fixed: `gulp clean`, was referencing an invalid directory
