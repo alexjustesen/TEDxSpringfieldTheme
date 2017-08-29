@@ -10,7 +10,7 @@
                         Copyright © <?= get_theme_mod('event_name', 'TEDx') ?> <?= date("Y"); ?>. All Rights Reserved.</p>
                 </div>
                 <div class="col-xs-12 col-md-4 col-lg-4">
-                    <p class="text-center"><a href="#" class="scroll-top"><i class="fa fa-arrow-up fa-fw"></i> Scroll Up</a></p>
+                    <p class="text-center"><a class="scrollup"><i class="fa fa-arrow-up fa-fw"></i> Scroll Up</a></p>
                 </div>
                 <div class="col-xs-12 col-md-4 col-lg-4">
                     <div class="built-by gutter-right gutter-bottom"></div>

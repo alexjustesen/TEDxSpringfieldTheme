@@ -61,6 +61,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Fixed: `gulp clean`, was referencing an invalid directory
 - Fixed: `gulp fonts`, was missing reference to Bootstrap fonts
 - Fixed: logo anchor to use `home_url()` instead of a custom function
+- Fixed: js scrollup function
 - Removed: DNS prefetch from `header.php` in favor of using a plugin
 - Removed: Twitter button and widget JS from `footer.php`
 - Removed: Facebook sdk from `header.php`
