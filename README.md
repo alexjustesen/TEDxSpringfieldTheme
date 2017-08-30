@@ -48,7 +48,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
-#### v1.1.0 (in development)
+#### v1.1.0 (Aug 29, 2017 - alpha)
 - Added: `dollarshaveclub/shave` package to bower for text truncation
 - New: Video card design for featured/past talks
 - New: Header design to include social links for Facebook, Instagram and Twitter
@@ -63,6 +63,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Fixed: `gulp fonts`, was missing reference to Bootstrap fonts
 - Fixed: logo anchor to use `home_url()` instead of a custom function
 - Fixed: js scrollup function
+- Fixed: Speaker custom post meta not saving blank values
 - Removed: DNS prefetch from `header.php` in favor of using a plugin
 - Removed: Facebook and Twitter share buttons from speaker profiles, recommend using a plugin instead
 - Removed: Twitter button and widget JS from `footer.php`
