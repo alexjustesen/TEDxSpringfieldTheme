@@ -4,6 +4,7 @@ class SpeakerPostType {
 
   public $custom_fields = array(
     '_speaker_email_address',
+    '_speaker_facebook_url',
     '_speaker_instagram_id',
     '_speaker_linkedin_url',
     '_speaker_twitter_id',
@@ -153,6 +154,7 @@ class SpeakerPostType {
 
   function add_meta_boxes () {
     add_meta_box('speaker_email_address', 'Email Address', array($this, 'render_email_address_meta_boxes'), 'speaker', 'normal', 'high');
+    add_meta_box('speaker_facebook_url', 'Facebook URL', array($this, 'render_facebook_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_instagram_id', 'Instagram ID', array($this, 'render_instagram_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_linkedin_url', 'LinkedIn URL', array($this, 'render_linkedin_meta_boxes'), 'speaker', 'normal', 'high');
     add_meta_box('speaker_twitter_id', 'Twitter ID', array($this, 'render_speaker_twitter_meta_boxes'), 'speaker', 'normal', 'high');
@@ -174,6 +176,14 @@ class SpeakerPostType {
       'partials/admin/speaker/_email_address.php',
       [
         'speaker_email_address' => get_post_meta(get_the_ID(), '_speaker_email_address', true)
+      ]);
+  }
+    
+  function render_facebook_meta_boxes () {
+    WP_Render::partial(
+      'partials/admin/speaker/_facebook_url.php',
+      [
+        'speaker_facebook_url' => get_post_meta(get_the_ID(), '_speaker_facebook_url', true)
       ]);
   }
     
@@ -286,7 +296,7 @@ class SpeakerPostType {
 
   function save_custom_fields ($post_id) {
     foreach ($this->custom_fields as $field) {
-      if (!empty($_POST[$field])) {
+      //if (!empty($_POST[$field])) {
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
           return;
         }
@@ -298,15 +308,10 @@ class SpeakerPostType {
           if (!current_user_can('edit_post', $post_id)) {
             return;
           } else {
-              //if( $field == '_speaker_email_address' ) {
-                //  update_post_meta( $post_id, sanitize_email( $_POST[$field] ) );
-              //}
-              //else { 
-                  update_post_meta($post_id, $field, $_POST[$field]);
-             //}
+            update_post_meta($post_id, $field, $_POST[$field]);
           }
         }
-      }
+      //}
     }
   }
 
