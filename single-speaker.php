@@ -12,6 +12,7 @@
                     $speaker            = get_post();
                     $speaker_name       = $speaker->post_title;
                     $speaker_email_address = get_post_meta( $speaker->ID, '_speaker_email_address', true );
+                    $speaker_facebook_url = get_post_meta( $speaker->ID, '_speaker_facebook_url', true );
                     $speaker_instagram_id = get_post_meta( $speaker->ID, '_speaker_instagram_id', true );
                     $speaker_linkedin_url = get_post_meta( $speaker->ID, '_speaker_linkedin_url', true );
                     $speaker_twitter_id = get_post_meta( $speaker->ID, '_speaker_twitter_id', true );
@@ -49,6 +50,10 @@
 
                                     <?php if( !empty( $speaker_linkedin_url )) : ?>
                                         <a href="<?= esc_url( $speaker_linkedin_url ); ?>" class="btn btn-link" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a>
+                                    <?php endif; ?>
+                                    
+                                    <?php if( !empty( $speaker_facebook_url )) : ?>
+                                        <a href="<?= esc_url( $speaker_facebook_url ); ?>" class="btn btn-link" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
                                     <?php endif; ?>
 
                                     <?php if( !empty( $speaker_instagram_id )) : ?>
