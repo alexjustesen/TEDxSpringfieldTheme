@@ -48,7 +48,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
-#### v1.1.0-alpha2 (in development)
+#### v1.1.0-alpha2 (Sept 1, 2017)
 - Added: `responsive-toolkit` package to assist with viewport changes
 - Removed: logo link option in the customizer, was replaced with the home_url() wordpress function
 - Update: header UI and implemented responsive-toolkit js function to change navbar position on <=sm viewport devices
