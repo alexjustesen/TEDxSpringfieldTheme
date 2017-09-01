@@ -68,23 +68,6 @@ function tedx_customize_register ($wp_customize) {
     )));
 
   $wp_customize->add_setting(
-    'logo_link',
-    array(
-      'default'   => '/',
-      'transport' => 'refresh',
-    ));
-  $wp_customize->add_control(
-    'tedx_event_logo_link',
-    array(
-      'priority' => 2,
-      'label'    => __('Logo Link', 'tedx'),
-      'section'  => 'tedx_event',
-      'settings' => 'logo_link',
-      'type'     => 'text'
-    ));
-
-
-  $wp_customize->add_setting(
     'event_name',
     array(
       'default'   => 'TEDxCity',
