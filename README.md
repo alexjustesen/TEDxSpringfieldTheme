@@ -48,7 +48,12 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
-#### v1.1.0 (Aug 29, 2017 - alpha)
+#### v1.1.0-alpha2 (in development)
+- Added: `responsive-toolkit` package to assist with viewport changes
+- Removed: logo link option in the customizer, was replaced with the home_url() wordpress function
+- Update: header UI and implemented responsive-toolkit js function to change navbar position on <=sm viewport devices
+
+#### v1.1.0-alpha (Aug 29, 2017)
 - Added: `dollarshaveclub/shave` package to bower for text truncation
 - New: Video card design for featured/past talks
 - New: Header design to include social links for Facebook, Instagram and Twitter
