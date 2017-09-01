@@ -21,10 +21,45 @@ $( document ).ready( function () {
         }, 600);
         return false;
     });
+    
+    // Show .cta-container
+    $('.cta-container').hide().removeClass( 'hidden' ).slideDown( 500 );
 });
 
 //-- Initiate Shave Classes -------------------------------------------------
 shave( '.talk-shortcode .caption .shave', 26);
+
+//-- Initiate responsive-toolkit --------------------------------------------
+(function($, document, window, viewport){
+    
+    // Executes once whole document has been loaded
+    $(document).ready(function() {
+        console.log('Current breakpoint:', viewport.current());
+        navbarChange();
+    });
+
+    $(window).resize(
+        viewport.changed(function(){
+            console.log('Current breakpoint:', viewport.current());
+            navbarChange();
+        })
+    );
+    
+    function navbarChange() {
+        if( viewport.is("<=sm") ) {
+            console.log('less than or equal to a small viewport.');
+            $( 'nav.navbar' ).removeClass( 'navbar-static-top' ).addClass( 'navbar-fixed-top' );
+            $( 'body' ).css( 'padding-top', '50px' );
+        }
+
+        if( viewport.is(">=md") ) {
+            console.log('greater than or equal to a medium viewport.');
+            $( 'nav.navbar' ).addClass( 'navbar-static-top' ).removeClass( 'navbar-fixed-top' );
+            $( 'body' ).css( 'padding-top', '0px' );
+        }
+    }
+
+})(jQuery, document, window, ResponsiveBootstrapToolkit);
 
 //-- TeamTile Class ---------------------------------------------------------
 function TeamTile(el) {

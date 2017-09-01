@@ -23,6 +23,21 @@
 </head>
 
 <body <?php body_class(); ?>>
+  
+  <?php if ( is_front_page() ) : ?>
+    <div class="hidden red-bg cta-container">
+        <div class="container">
+            <div class="row homepage-header-actions">
+                <div class="col-xs-12">
+                    <p class="text-center text-white">
+                        <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" rel="noopener" class="btn btn-link"><i class="fa fa-file-text-o fa-fw"></i> <?= get_theme_mod( 'button_callout_text' ); ?></a><br/>
+                        <em><?= get_theme_mod('header_callout', 'Header Callout') ?></em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
 
   <div class="black-bg">
     <div class="container">
@@ -62,20 +77,7 @@
     </div>
   </div><!-- .black-bg -->
     
-    <?php if ( is_front_page() ) : ?>
-    <div class="red-bg">
-        <div class="container">
-            <div class="row homepage-header-actions">
-                <div class="col-xs-12">
-                    <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" rel="noopener" class="btn btn-link btn-lg pull-left"><i class="fa fa-file-text-o fa-2x"></i><br/><?= get_theme_mod( 'button_callout_text' ); ?></a>
-                    <p class="text-white"><em><?= get_theme_mod('header_callout', 'Header Callout') ?></em></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php endif; ?>
-    
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
