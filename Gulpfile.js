@@ -18,6 +18,7 @@ var gulp = require('gulp'),
 var bowerJsDependencies = [
   './vendor/jquery/dist/jquery.js',
   './vendor/bootstrap/dist/js/bootstrap.js',
+  './vendor/responsive-bootstrap-toolkit/dist/bootstrap-toolkit.js',
   './vendor/shave/dist/shave.js'
 ];
 var bowerCssDependencies = [

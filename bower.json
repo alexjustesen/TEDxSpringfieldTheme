@@ -24,7 +24,8 @@
     "bootstrap": "~3.3.7",
     "font-awesome": "~4.6.3",
     "animate.css": "~3.5.2",
-    "shave": "^2.0.4"
+    "shave": "^2.0.4",
+    "responsive-bootstrap-toolkit": "responsive-toolkit#^2.6.3"
   },
   "description": "",
   "main": ""
