@@ -18,7 +18,7 @@ $( document ).ready( function () {
     $('.scrollup').on( "click", function () {
         $("html, body").animate({
             scrollTop: 0
-        }, 600);
+        }, 250);
         return false;
     });
     
