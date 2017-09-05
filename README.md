@@ -20,6 +20,7 @@ This theme has been designed and coded by [The Working Group](http://twg.ca) and
 
 ### Installation (Production)
 * Download the latest theme release [TEDx Theme](https://github.com/alexjustesen/TEDxSpringfieldTheme/releases)
+* Set the Permalink Settings to customer structure `/blog/%postname%/`
 * Install the following WordPress plugins dependencies:
     * [Advanced Custom Fields](http://www.advancedcustomfields.com/)
     * [Option Tree](https://wordpress.org/plugins/option-tree/)
@@ -27,9 +28,9 @@ This theme has been designed and coded by [The Working Group](http://twg.ca) and
 ### Installation (Developers)
 
 * Clone/fork or download the latest repo zip from (https://github.com/alexjustesen/TEDxSpringfieldTheme) and install it to `./wp-content/themes/`.
-* Run `npm install`
-* Run `bower install`
-* Run `gulp default`
+* Run using bash command line in the theme folder `npm install` then `bower install` to install builder dependencies
+* Run `gulp` or `gulp default` to build the theme files
+* Set the Permalink Settings to customer structure `/blog/%postname%/`
 * Install the following WordPress plugins dependencies:
     * [Advanced Custom Fields](http://www.advancedcustomfields.com/)
     * [Option Tree](https://wordpress.org/plugins/option-tree/)
@@ -47,6 +48,11 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 
 ### Change Log
+
+#### v1.1.0-alpha3 (Sept 4, 2017)
+- Improved: Scroll up buttons speed
+- Improved: Installation instructions in `readme.md`
+- Removed: text-decoration from `.scrollup` css class
 
 #### v1.1.0-alpha2 (Sept 1, 2017)
 - Added: `responsive-toolkit` package to assist with viewport changes
