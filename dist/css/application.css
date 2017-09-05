@@ -1,3 +1,7 @@
+/**
+ * Sass Variables 
+ * Social Media Brand Colors 
+ */
 body {
   font-family: Helvetica, Arial, "Lucida Grande", sans-serif; }
 
@@ -872,8 +876,22 @@ ul.page-numbers {
 .text-white {
   color: #ffffff; }
 
+.scrollup:active,
 .scrollup:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 .single-speaker-container a.btn-link {
   color: #666; }
+
+.link-facebook:active,
+.link-facebook:hover {
+  color: #3b5998; }
+
+.link-instagram:active,
+.link-instagram:hover {
+  color: #4c5fd7; }
+
+.link-twitter:active,
+.link-twitter:hover {
+  color: #00b6f1; }

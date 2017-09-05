@@ -1,5 +1,6 @@
 //-- Initializers -----------------------------------------------------------
 @import "initializers/colors";
+@import "initializers/socialmedia";
 @import "initializers/typography";
 @import "initializers/bootstrap_override";
 @import "initializers/respond_to";
@@ -70,4 +71,19 @@
 
 .single-speaker-container a.btn-link{
     color: $dark-gray;
+}
+
+.link-facebook:active,
+.link-facebook:hover {
+    color: $facebook;
+}
+
+.link-instagram:active,
+.link-instagram:hover {
+    color: $instagramblue;
+}
+
+.link-twitter:active,
+.link-twitter:hover {
+    color: $twitter;
 }

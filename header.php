@@ -62,13 +62,13 @@
           <div class="col-xs-6 col-md-3 col-lg-3">
               <span class="pull-right social-links">
                   <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
-                      <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
+                      <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link link-facebook" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
                   <?php endif; ?>
                   <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
-                      <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
+                      <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link link-instagram" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
                   <?php endif; ?>
                   <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
-                      <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
+                      <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link link-twitter" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
                   <?php endif; ?>
               </span>
           </div>
