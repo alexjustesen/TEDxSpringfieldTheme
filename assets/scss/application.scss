@@ -62,8 +62,10 @@
     color: #ffffff
 }
 
+.scrollup:active,
 .scrollup:hover {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .single-speaker-container a.btn-link{
