@@ -24,19 +24,27 @@
 
 <body <?php body_class(); ?>>
   
-  <?php if ( is_front_page() ) : ?>
-    <div class="hidden red-bg cta-container">
-        <div class="container">
-            <div class="row homepage-header-actions">
-                <div class="col-xs-12">
-                    <p class="text-center text-white">
-                        <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" rel="noopener" class="btn btn-link"><i class="fa fa-file-text-o fa-fw"></i> <?= get_theme_mod( 'button_callout_text' ); ?></a><br/>
-                        <em><?= get_theme_mod('header_callout', 'Header Callout') ?></em>
-                    </p>
+    <?php if ( is_front_page() && !empty( get_theme_mod('button_callout_link') ) || !empty( get_theme_mod( 'button_callout_text' ) ) || !empty( get_theme_mod('header_callout', 'Header Callout') ) ) : ?>
+        <div class="hidden red-bg cta-container">
+            <div class="container">
+                <div class="row homepage-header-actions">
+                    <div class="col-xs-12">
+                        <?php if( !empty( get_theme_mod('button_callout_link') ) && !empty( get_theme_mod( 'button_callout_text' ) ) ) : ?>
+                            <p class="text-center">
+                                <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" rel="noopener" class="btn btn-link"><i class="fa fa-file-text-o fa-fw"></i>&nbsp;
+                                    <?= get_theme_mod( 'button_callout_text' ); ?>
+                                </a>
+                            </p>
+                        <?php endif; ?>
+                        <?php if( !empty( get_theme_mod('header_callout', 'Header Callout') ) ) : ?>
+                            <p class="text-center">
+                                <?= get_theme_mod('header_callout', 'Header Callout'); ?>
+                            </p>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     <?php endif; ?>
 
   <div class="black-bg">

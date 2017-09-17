@@ -868,14 +868,22 @@ ul.page-numbers {
  */
 .homepage-header-actions {
   padding-top: 25px;
-  padding-bottom: 25px; }
+  padding-bottom: 25px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px; }
 
 .red-bg {
   background-color: #e62b1e; }
 
 .text-white {
-  color: #ffffff; }
+  color: #fff; }
 
+/*.cta-header-callout-text {
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
+}*/
 .scrollup:active,
 .scrollup:hover {
   cursor: pointer;

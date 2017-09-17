@@ -53,6 +53,9 @@
 .homepage-header-actions {
     padding-top: 25px;
     padding-bottom: 25px;
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .red-bg {
@@ -60,8 +63,14 @@
 }
 
 .text-white {
-    color: #ffffff
+    color: $white;
 }
+
+/*.cta-header-callout-text {
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
+}*/
 
 .scrollup:active,
 .scrollup:hover {

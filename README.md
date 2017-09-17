@@ -49,6 +49,9 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.1.0-beta (Step 17, 2017)
+- Fixed issue with header cta text/button still showing when blank
+
 #### v1.1.0-alpha3 (Sept 4, 2017)
 - Improved: Scroll up buttons speed
 - Improved: Installation instructions in `readme.md`
