@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
   
-    <?php if ( is_front_page() && !empty( get_theme_mod('button_callout_link') ) || !empty( get_theme_mod( 'button_callout_text' ) ) || !empty( get_theme_mod('header_callout', 'Header Callout') ) ) : ?>
+    <?php if ( is_front_page() ) : ?> <?php if ( !empty( get_theme_mod('button_callout_link') ) || !empty( get_theme_mod( 'button_callout_text' ) ) || !empty( get_theme_mod('header_callout', 'Header Callout') ) ) : ?>
         <div class="hidden red-bg cta-container">
             <div class="container">
                 <div class="row homepage-header-actions">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-    <?php endif; ?>
+    <?php endif; endif; ?>
 
   <div class="black-bg">
     <div class="container">
