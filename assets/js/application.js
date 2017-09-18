@@ -34,26 +34,22 @@ shave( '.talk-shortcode .caption .shave', 26);
     
     // Executes once whole document has been loaded
     $(document).ready(function() {
-        console.log('Current breakpoint:', viewport.current());
         navbarChange();
     });
 
     $(window).resize(
         viewport.changed(function(){
-            console.log('Current breakpoint:', viewport.current());
             navbarChange();
         })
     );
     
     function navbarChange() {
         if( viewport.is("<=sm") ) {
-            console.log('less than or equal to a small viewport.');
             $( 'nav.navbar' ).removeClass( 'navbar-static-top' ).addClass( 'navbar-fixed-top' );
             $( 'body' ).css( 'padding-top', '50px' );
         }
 
         if( viewport.is(">=md") ) {
-            console.log('greater than or equal to a medium viewport.');
             $( 'nav.navbar' ).addClass( 'navbar-static-top' ).removeClass( 'navbar-fixed-top' );
             $( 'body' ).css( 'padding-top', '0px' );
         }
