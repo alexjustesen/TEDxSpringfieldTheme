@@ -296,7 +296,7 @@ class SpeakerPostType {
 
   function save_custom_fields ($post_id) {
     foreach ($this->custom_fields as $field) {
-      //if (!empty($_POST[$field])) {
+      if (isset($_POST[$field])) {
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
           return;
         }
@@ -311,7 +311,7 @@ class SpeakerPostType {
             update_post_meta($post_id, $field, $_POST[$field]);
           }
         }
-      //}
+      }
     }
   }
 
