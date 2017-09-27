@@ -49,6 +49,12 @@ small {
   background-color: #000;
   border-color: #080808; }
 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  font-weight: 700;
+  background-color: #000000; }
+
 /**
  * URL: https://gist.github.com/peschee/5734414
  * Responsive mixin. The media breakpoints are as defined
