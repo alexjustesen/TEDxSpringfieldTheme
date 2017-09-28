@@ -6,14 +6,13 @@
             <div class="row">
                 <div class="col-xs-6">
                     <p class="legal">
-                    This independent TEDx event is operated under license from <a href="https://www.ted.com/" rel="noopener" target="_blank">TED</a>.<br>
+                    This independent TEDx event is operated under license from <a href="//www.ted.com/" rel="noopener" target="_blank">TED</a>.<br>
                         Copyright © <?= get_theme_mod('event_name', 'TEDx') ?> <?= date("Y"); ?>. All Rights Reserved.</p>
                 </div>
                 <div class="col-xs-6">
                     <p class="text-right web-partners">
-                        Developed by <a href="https://alexjustesen.com" rel="noopener" target="_blank">Alex Justesen</a>
-                        <br/><?php printf( '%1$s is version %2$s', $my_theme->get( 'Name' ), $my_theme->get( 'Version' ) ); ?>
-                        <br/><i class="fa fa-code-fork"></i> this WordPress Theme on <a href="https://github.com/alexjustesen/TEDxSpringfieldTheme" rel="noopener" target="_blank"><i class="fa fa-github"></i> GitHub</a>.
+                        Developed by <a href="//alexjustesen.com" rel="noopener" target="_blank">Alex Justesen</a>
+                        <br/><?php printf( '%1$s v%2$s', $my_theme->get( 'Name' ), $my_theme->get( 'Version' ) ); ?>, <i class="fa fa-code-fork"></i> this WP Theme on <a href="//github.com/alexjustesen/TEDxSpringfieldTheme" rel="noopener" target="_blank"><i class="fa fa-github"></i> GitHub</a>.
                     </p>
                 </div>
                 <div class="col-xs-12">
