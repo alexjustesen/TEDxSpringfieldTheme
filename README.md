@@ -49,6 +49,12 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.2.0-alpha (Sept 27, 2017)
+- Added team categories
+- Added team cateogry support to the shortcode
+- Minor UI changes to the navbar
+- Updated team member shortcode template to the new design
+
 #### v1.1.0 (Sept 18, 2017)
 - Fixed an issue with the `save_custom_fields` function causing a undefined index error
 
