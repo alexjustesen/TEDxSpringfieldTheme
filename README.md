@@ -53,6 +53,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 - Added team categories
 - Added team cateogry support to the shortcode
 - Minor UI changes to the navbar
+- Minor wording changes and link updates to the footer
 - Updated team member shortcode template to the new design
 
 #### v1.1.0 (Sept 18, 2017)
