@@ -24,11 +24,11 @@
                 }
             ?>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 match-height" data-remote="true" data-href="<?php the_permalink(); ?>">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2 match-height" data-remote="true" data-href="<?php the_permalink(); ?>">
             
                 <div class="row">
                    
-                    <div class="col-xs-12">
+                    <div class="col-xs-6 col-xs-push-3 col-md-8 col-md-push-2">
                        
                         <img src="<?= $thumbnail_src; ?>" alt="<?php the_title(); ?>" class="team-photo img-responsive img-circle">
                         
