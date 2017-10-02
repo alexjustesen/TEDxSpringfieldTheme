@@ -904,3 +904,6 @@ ul.page-numbers {
 .link-twitter:active,
 .link-twitter:hover {
   color: #00b6f1; }
+
+.team-photo {
+  padding: 15px 0; }
