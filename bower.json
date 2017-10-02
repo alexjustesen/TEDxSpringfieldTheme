@@ -25,7 +25,8 @@
     "font-awesome": "~4.6.3",
     "animate.css": "~3.5.2",
     "shave": "^2.0.4",
-    "responsive-bootstrap-toolkit": "responsive-toolkit#^2.6.3"
+    "responsive-bootstrap-toolkit": "responsive-toolkit#^2.6.3",
+    "matchHeight": "matchheight#^0.7.2"
   },
   "description": "",
   "main": ""
