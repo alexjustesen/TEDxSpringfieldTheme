@@ -885,11 +885,6 @@ ul.page-numbers {
 .text-white {
   color: #fff; }
 
-/*.cta-header-callout-text {
-    color: $white;
-    font-weight: 700;
-    font-size: 18px;
-}*/
 .scrollup:active,
 .scrollup:hover {
   cursor: pointer;
