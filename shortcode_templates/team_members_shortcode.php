@@ -24,7 +24,7 @@
                 }
             ?>
 
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 team-tile" data-remote="true" data-href="<?php the_permalink(); ?>">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 match-height" data-remote="true" data-href="<?php the_permalink(); ?>">
             
                 <div class="row">
                    
