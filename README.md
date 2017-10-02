@@ -49,6 +49,14 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.2.0-beta (Oct 2, 2017)
+- Added matchHeight JS library
+- Added matchHeight function to fix alighnment issues on the team page where a col height was different
+- Cleaned up js code contained in `application.js`
+- Fixed issue where blank custom post values for team custom post would not save
+- Removed unused code from `application.scss`
+- Removed unused code from `application.js`
+
 #### v1.2.0-alpha (Sept 27, 2017)
 - Added team categories
 - Added team cateogry support to the shortcode
