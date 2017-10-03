@@ -49,6 +49,11 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.2.0-beta2 (tbd)
+- Added bootstrap navbar border-radius override
+- Added `comments.php` to make theme compliant with theme standards
+- Moved `tedx_helpers.php` to includes root
+
 #### v1.2.0-beta (Oct 2, 2017)
 - Added matchHeight JS library
 - Added matchHeight function to fix alighnment issues on the team page where a col height was different
