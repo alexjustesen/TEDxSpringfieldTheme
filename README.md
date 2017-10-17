@@ -49,10 +49,12 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
-#### v1.2.0-beta2 (tbd)
+#### v1.2.0-beta2 (Oct 17, 2017)
 - Added bootstrap navbar border-radius override
 - Added `comments.php` to make theme compliant with theme standards
+- Fixed undefined variable error in `single-talk.php` with `get_excerpt` function
 - Moved `tedx_helpers.php` to includes root
+- Removed `.video-container` class in favor of the defaul bootstrap responsive embed class
 
 #### v1.2.0-beta (Oct 2, 2017)
 - Added matchHeight JS library
