@@ -327,10 +327,6 @@ body.single-speaker .related-speaker-tile {
   body.single-speaker .related-speaker-tile .related-speaker-position {
     font-size: 11px; }
 
-body.single-talk .social-twitter {
-  position: relative;
-  top: 7px; }
-
 body.single-talk .related-talk-tile {
   padding-bottom: 10px; }
   body.single-talk .related-talk-tile img {
@@ -851,19 +847,6 @@ ul.page-numbers {
       filter: alpha(opacity=40);
       position: relative;
       width: 100%; }
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0; }
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
