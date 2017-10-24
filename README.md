@@ -49,6 +49,10 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.2.0-rc1 (Oct 23, 2017)
+- Minor UI updates for `talk_shortcode.php`
+- Minor UI updates for `footer.php`
+
 #### v1.2.0-beta2 (Oct 17, 2017)
 - Added bootstrap navbar border-radius override
 - Added `comments.php` to make theme compliant with theme standards
