@@ -16,14 +16,23 @@
 
             <div class="thumbnail talk-shortcode">
                 
-                <img src="//img.youtube.com/vi/<?= $video_id; ?>/0.jpg" alt="<?= the_title(); ?>">
-                
+                <div class="img-wrapper">
+                   
+                    <img src="//img.youtube.com/vi/<?= $video_id; ?>/0.jpg" alt="<?= the_title(); ?>" class="img-responsive">
+                    
+                    <div class="img-overlay">
+                        <a href="<?= get_permalink($post->ID) ?>" class="btn btn-md btn-danger" role="button"><i class="fa fa-play fa-fw"></i></a>
+                    </div>
+                    
+                </div>
+                                
                 <div class="caption">
-                    <h4 class="shave" title="<?= the_title(); ?>"><?= the_title(); ?></h4>
-                    <p class="shave" title="<?= $speaker_name; ?>"><?= $speaker_name; ?></p>
+                    <h5 class="video-title shave" title="<?= the_title(); ?>"><?= the_title(); ?></h5>
+                    <p class="video-description"><span class="shave" title="<?= $speaker_name; ?>"><?= $speaker_name; ?></span><br/>
+                        Talk Year: <?php single_term($post, 'talk_years'); ?>
+                    </p>
                     <p>
-                        <a href="<?= get_permalink($post->ID) ?>" class="btn btn-danger" role="button"><i class="fa fa-play fa-fw"></i> Watch</a>
-                        <span class="pull-right"><small>Talk Year: <?php single_term($post, 'talk_years'); ?></small></span>
+                        
                     </p>
                 </div>
                 
