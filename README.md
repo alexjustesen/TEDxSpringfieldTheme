@@ -49,6 +49,10 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.2.0 (Nov 1, 2017)
+- Released v1.2.0
+- Minor UI updates for blog sticky posts
+
 #### v1.2.0-rc1 (Oct 23, 2017)
 - Minor UI updates for `talk_shortcode.php`
 - Minor UI updates for `footer.php`
