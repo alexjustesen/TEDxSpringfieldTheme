@@ -49,6 +49,14 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.3.0 (in development)
+- Cleaned up unused code
+- Moved cta code to theme partial
+- Moved cta to it's own customizer section
+- Updated code inline documentation
+- Updated cta UI
+- Updated event date in the customizer to a date field
+
 #### v1.2.0 (Nov 1, 2017)
 - Released v1.2.0
 - Minor UI updates for blog sticky posts
