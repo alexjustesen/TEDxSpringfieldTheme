@@ -20,7 +20,7 @@ function tedx_customize_register ($wp_customize) {
     'tedx_event',
     array(
       'title'    => __('TEDx Event', 'tedx'),
-      'priority' => 2147483630
+      'priority' => 1000,
     ));
 
   $wp_customize->add_setting(
@@ -86,7 +86,7 @@ function tedx_customize_register ($wp_customize) {
   $wp_customize->add_setting(
     'event_date',
     array(
-      'default'   => 'Jan 1, 1970',
+      'sanitize_callback' => 'tedx_sanitize_date',
       'transport' => 'refresh',
     ));
   $wp_customize->add_control(
@@ -96,7 +96,10 @@ function tedx_customize_register ($wp_customize) {
       'label'    => __('Event Date', 'tedx'),
       'section'  => 'tedx_event',
       'settings' => 'event_date',
-      'type'     => 'text'
+      'type'     => 'date',
+      'input_attrs' => array(
+        'placeholder' => __( 'mm/dd/yyyy' ),
+      ),
     ));
 
   $wp_customize->add_setting(
@@ -115,52 +118,107 @@ function tedx_customize_register ($wp_customize) {
       'type'     => 'text'
     ));
 
-  $wp_customize->add_setting(
-    'header_callout',
-    array(
-      'default'   => 'Header Callout',
-      'transport' => 'refresh',
+    // Section: tedx_cta
+    $wp_customize->add_section(
+        'tedx_cta',
+        array(
+            'title'    => __('TEDx Call to Action', 'tedx'),
+            'priority' => 1002,
+        ));
+    
+    // Option: tedx_cta_enable
+    $wp_customize->add_setting(
+        'tedx_cta_enable',
+        array(
+            'default'   => '',
+            'transport' => 'refresh',
     ));
-  $wp_customize->add_control(
-    'tedx_event_header_callout',
-    array(
-      'priority' => 6,
-      'label'    => __('Header Callout', 'tedx'),
-      'section'  => 'tedx_event',
-      'settings' => 'header_callout',
-      'type'     => 'text'
+    $wp_customize->add_control(
+        'tedx_event_cta_enable',
+        array(
+            'priority' => 0,
+            'label'    => __('Enable call to action', 'tedx'),
+            'description' => __( 'Check off this box to turn the CTA function on.', 'tedx' ),
+            'section'  => 'tedx_cta',
+            'settings' => 'tedx_cta_enable',
+            'type'     => 'checkbox',
+    ));
+    
+    // Option: tedx_cta_text
+    $wp_customize->add_setting(
+        'tedx_cta_text',
+        array(
+            'default'   => '',
+            'transport' => 'refresh',
+    ));
+    $wp_customize->add_control(
+        'tedx_event_cta_text',
+        array(
+            'priority' => 1,
+            'label'    => __('Message text', 'tedx'),
+            'description' => __( 'Use HTML to format the text.', 'tedx' ),
+            'section'  => 'tedx_cta',
+            'settings' => 'tedx_cta_text',
+            'type'     => 'textarea',
     ));
 
-  $wp_customize->add_setting(
-    'button_callout_text',
-    array(
-      'default'   => 'CTA',
-      'transport' => 'refresh',
+    // Option: tedx_cta_button_text
+    $wp_customize->add_setting(
+        'tedx_cta_button_text',
+        array(
+            'default'   => 'About TEDx',
+            'transport' => 'refresh',
     ));
-  $wp_customize->add_control(
-    'tedx_event_button_callout_text',
-    array(
-      'priority' => 7,
-      'label'    => __('Button Callout Text', 'tedx'),
-      'section'  => 'tedx_event',
-      'settings' => 'button_callout_text',
-      'type'     => 'text'
+    $wp_customize->add_control(
+        'tedx_event_cta_btton_text',
+        array(
+            'priority' => 2,
+            'label'    => __('Button text', 'tedx'),
+            'section'  => 'tedx_cta',
+            'settings' => 'tedx_cta_button_text',
+            'type'     => 'text',
     ));
 
-  $wp_customize->add_setting(
-    'button_callout_link',
-    array(
-      'default'   => '/',
-      'transport' => 'refresh',
+    // Option: tedx_cta_button_url
+    $wp_customize->add_setting(
+        'tedx_cta_button_url',
+        array(
+            'default'   => '/',
+            'transport' => 'refresh',
     ));
-  $wp_customize->add_control(
-    'tedx_event_button_callout_link',
-    array(
-      'priority' => 8,
-      'label'    => __('Button Callout Link', 'tedx'),
-      'section'  => 'tedx_event',
-      'settings' => 'button_callout_link',
-      'type'     => 'text'
+    $wp_customize->add_control(
+        'tedx_event_cta_button_url',
+        array(
+            'priority' => 3,
+            'label'    => __('Button url', 'tedx'),
+            'section'  => 'tedx_cta',
+            'settings' => 'tedx_cta_button_url',
+            'type'     => 'url',
+    ));
+    
+    // Option: tedx_cta_button_target
+    $wp_customize->add_setting( 
+        'tedx_cta_button_target', 
+        array(
+            'default' => '_self',
+            'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(
+        'tedx_event_cta_button_target',
+        array(
+            'priority' => 4,
+            'label' => __( 'Button target' ),
+            'description' => __( 'The button target specifies where to open the link.' ),
+            'section' => 'tedx_cta',
+            'settings' => 'tedx_cta_button_target',
+            'type' => 'radio',
+            'choices' => array(
+                '_blank' => __( 'Blank' ),
+                '_self' => __( 'Self' ),
+                '_parent' => __( 'Parent' ),
+                '_top' => __( 'Top' ),
+            ),
     ));
 
   // Section
@@ -168,7 +226,7 @@ function tedx_customize_register ($wp_customize) {
     'tedx_social',
     array(
       'title'    => __('TEDx Social', 'tedx'),
-      'priority' => 2147483631
+      'priority' => 1001
     ));
     
     //Facebook URL
@@ -227,3 +285,8 @@ function tedx_customize_register ($wp_customize) {
 }
 
 add_action('customize_register', 'tedx_customize_register');
+
+function tedx_sanitize_date( $input ) {
+    $date = new DateTime( $input );
+    return $date->format('m-d-Y');
+}

@@ -24,69 +24,62 @@
 
 <body <?php body_class(); ?>>
   
-    <?php if ( is_front_page() ) : ?> <?php if ( !empty( get_theme_mod('button_callout_link') ) || !empty( get_theme_mod( 'button_callout_text' ) ) || !empty( get_theme_mod('header_callout', 'Header Callout') ) ) : ?>
-        <div class="hidden red-bg cta-container">
-            <div class="container">
-                <div class="row homepage-header-actions">
-                    <div class="col-xs-12">
-                        <?php if( !empty( get_theme_mod('button_callout_link') ) && !empty( get_theme_mod( 'button_callout_text' ) ) ) : ?>
-                            <p class="text-center">
-                                <a href="<?= get_theme_mod('button_callout_link', '/'); ?>" target="_blank" rel="noopener" class="btn btn-link"><i class="fa fa-file-text-o fa-fw"></i>&nbsp;
-                                    <?= get_theme_mod( 'button_callout_text' ); ?>
-                                </a>
-                            </p>
-                        <?php endif; ?>
-                        <?php if( !empty( get_theme_mod('header_callout', 'Header Callout') ) ) : ?>
-                            <p class="text-center">
-                                <?= get_theme_mod('header_callout', 'Header Callout'); ?>
-                            </p>
-                        <?php endif; ?>
+    <?php if ( get_theme_mod( 'tedx_cta_enable' ) == '1' ) : ?>
+        <?php get_template_part( 'partials/_call_to_action' ); ?>
+    <?php endif; ?>
+
+    <div class="black-bg">
+        
+        <div class="container">
+            
+            <header>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-md-3 col-lg-3 hidden-xs hidden-sm">
+                        <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
+                        <a href="<?= home_url(); ?>" target="_self">
+                            <img src="<?= $logo ?>" alt="Logo" class="img-responsive">
+                        </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    <?php endif; endif; ?>
 
-  <div class="black-bg">
-    <div class="container">
-      <header>
+                    <div class="col-xs-6 col-md-6 col-lg-6">
+                        <div class="header-date-location">
+                            <?php 
+                                $date = new DateTime( get_theme_mod('event_date' ) );
+                                $event_date = $date->format('F j, Y');
+                            ?>
+                            <time class="date"><?= $event_date ?></time>
+                            <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
+                        </div>
+                    </div>
 
-        <div class="row">
-         
-          <div class="col-xs-12 col-md-3 col-lg-3 hidden-xs hidden-sm">
-              <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
-              <a href="<?= home_url(); ?>" target="_self">
-                  <img src="<?= $logo ?>" alt="Logo" class="img-responsive">
-              </a>
-          </div>
-          
-          <div class="col-xs-6 col-md-6 col-lg-6">
-              <div class="header-date-location">
-                  <time class="date"><?= get_theme_mod('event_date', 'Event Date') ?></time>
-                  <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
-              </div>
-          </div>
-          
-          <div class="col-xs-6 col-md-3 col-lg-3">
-              <span class="pull-right social-links">
-                  <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
-                      <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link link-facebook" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
-                  <?php endif; ?>
-                  <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
-                      <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link link-instagram" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
-                  <?php endif; ?>
-                  <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
-                      <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link link-twitter" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
-                  <?php endif; ?>
-              </span>
-          </div>
-        </div><!-- .row -->
-      </header>
-    </div>
-  </div><!-- .black-bg -->
+                    <div class="col-xs-6 col-md-3 col-lg-3">
+                        <span class="pull-right social-links">
+                            <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
+                                <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link link-facebook" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
+                            <?php endif; ?>
+                            <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
+                                <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link link-instagram" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
+                            <?php endif; ?>
+                            <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
+                                <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link link-twitter" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
+                            <?php endif; ?>
+                        </span>
+                    </div>
+                
+                </div><!-- /.row -->
+            
+            </header>
+            
+        </div><!-- /.container -->
+        
+    </div><!-- /.black-bg -->
     
     <nav class="navbar navbar-inverse" role="navigation">
+        
         <div class="container">
+            
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -111,5 +104,7 @@
                     'walker'            => new wp_bootstrap_navwalker())
                 );
             ?>
-        </div>
-    </nav>
+            
+        </div><!-- /.containter -->
+        
+    </nav><!-- /.navbar -->
