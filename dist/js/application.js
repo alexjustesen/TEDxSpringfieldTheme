@@ -14,9 +14,6 @@ $( document ).ready( function () {
         return false;
     });
     
-    // Show .cta-container
-    //$('.cta-container').hide().removeClass( 'hidden' ).slideDown( 500 );
-    
     // Initiate Shave js function
     shave( '.talk-shortcode .caption .shave', 26);
 
