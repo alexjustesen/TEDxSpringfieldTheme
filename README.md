@@ -49,13 +49,40 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
-#### v1.3.0 (in development)
-- `partials/_call_to_action.php` - updated cta UI and made coding improvements
+#### v1.3.0-beta (Dec 12, 2017)
+- `assets/js/application.js`
+  * removed cta slideDown function
+  * removed navbar viewport function
+- `assets/scss/application.scss`
+  * created new cta style classes
+  * removed unused css code
+  * updated hex code values to use color palette variables
+- `assets/scss/initializers/_bootstrap_override.scss`
+  * updated styles to reflect tedx color palette
+- `includes/theme_setup.php`
+  * added cta button target options
+  * added cta enable checkbox
+  * added logo customizer default image
+  * changed cta text customizer input field to textarea type
+  * changed event date customizer input field to date type
+  * moved cta options to its own customizer section
+- `partials/_call_to_action.php`
+  * created file with cta code from `header.php`
   * made coding improvements
   * updated cta UI
-- `header.php` - fixed issue with date format code and moved cta container to `partials/_call_to_action.php`
-- `style.css` - added text domain and required core wp styles
-- Updated event date in the customizer to a date field
+- `header.php`
+  * added brand to navbar for xs and sm screens
+  * added icon to date text
+  * added icon to location text
+  * cleaned up .navbar code
+  * fixed issue with event date code error
+  * moved cta code to `partials/_call_to_action.php`
+  * removed ng-app reference, angularjs not used
+  * to include cta, code now looks tedx_cta_enable = "1"
+- `style.css`
+  * added core wordpress styles
+  * added text domain
+  * updated to v1.3.0
 
 #### v1.2.0 (Nov 1, 2017)
 - Released v1.2.0
