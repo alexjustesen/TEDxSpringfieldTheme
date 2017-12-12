@@ -56,7 +56,10 @@ function tedx_customize_register ($wp_customize) {
     ));
 
   $wp_customize->add_setting(
-    'logo'
+    'logo',
+      array(
+        'default' => get_bloginfo('template_url') . '/dist/img/defaults/TEDx_logo_k_RGB__290.jpg',
+      )
   );
   $wp_customize->add_control(
     new WP_Customize_Image_Control(
