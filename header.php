@@ -44,28 +44,32 @@
                     </div>
 
                     <div class="col-xs-6 col-md-6 col-lg-6">
+                        
                         <div class="header-date-location">
-                            <?php 
-                                $date = new DateTime( get_theme_mod('event_date' ) );
-                                $event_date = $date->format('F j, Y');
-                            ?>
-                            <time class="date"><?= $event_date ?></time>
+                            <time class="date"><?= date( 'F j, Y', strtotime( get_theme_mod('event_date') ) ) ?></time>
                             <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
                         </div>
+                        
                     </div>
 
                     <div class="col-xs-6 col-md-3 col-lg-3">
+                        
                         <span class="pull-right social-links">
+                            
                             <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
                                 <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link link-facebook" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
                             <?php endif; ?>
+                            
                             <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
                                 <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link link-instagram" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
                             <?php endif; ?>
+                            
                             <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
                                 <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link link-twitter" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
                             <?php endif; ?>
+                            
                         </span>
+                        
                     </div>
                 
                 </div><!-- /.row -->

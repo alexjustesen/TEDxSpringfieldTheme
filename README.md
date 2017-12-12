@@ -51,6 +51,7 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 #### v1.3.0 (in development)
 - Cleaned up unused code
+- Fixed event date format issue in `header.php`
 - Moved cta code to theme partial
 - Moved cta to it's own customizer section
 - Updated code inline documentation
