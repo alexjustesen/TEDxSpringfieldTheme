@@ -291,5 +291,5 @@ add_action('customize_register', 'tedx_customize_register');
 
 function tedx_sanitize_date( $input ) {
     $date = new DateTime( $input );
-    return $date->format('m-d-Y');
+    return $date->format('Y-m-d');
 }

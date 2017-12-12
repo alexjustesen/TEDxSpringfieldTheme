@@ -2,7 +2,7 @@
     $template_url = get_template_directory_uri();
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js" ng-app="TEDxTheme">
+<html <?php language_attributes(); ?> class="no-js">
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -46,8 +46,8 @@
                     <div class="col-xs-6 col-md-6 col-lg-6">
                         
                         <div class="header-date-location">
-                            <time class="date"><?= date( 'F j, Y', strtotime( get_theme_mod('event_date') ) ) ?></time>
-                            <span class="location"><?= get_theme_mod('event_location', 'Event Location') ?></span>
+                            <time class="date"><i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i> <?php echo date( 'F j, Y', strtotime( get_theme_mod('event_date') ) ); ?></time>
+                            <span class="location"><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i><?php echo get_theme_mod('event_location', 'Event Location'); ?></span>
                         </div>
                         
                     </div>
@@ -80,21 +80,22 @@
         
     </div><!-- /.black-bg -->
     
-    <nav class="navbar navbar-inverse" role="navigation">
-        
+    <div class="navbar navbar-inverse " role="navigation">
+       
         <div class="container">
-            
-            <!-- Brand and toggle get grouped for better mobile display -->
+           
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tedx-navbar-primary">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="<?= home_url(); ?>" class="navbar-brand visible-xs-block"><?= bloginfo( 'name' ); ?></a>
-            </div>
-
+                <div class="hidden-md hidden-lg">
+                    <a class="navbar-brand" href="<?php echo get_bloginfo( 'url' ); ?>"><?php echo get_bloginfo( 'name' ); ?></a>
+                </div>
+            </div><!-- /.navbar-header -->
+            
             <?php
                 wp_nav_menu( array(
                     'menu'              => 'primary',
@@ -102,13 +103,13 @@
                     'depth'             => 2,
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'bs-example-navbar-collapse-1',
-                    'menu_class'        => 'nav navbar-nav',
+                    'container_id'      => 'tedx-navbar-primary',
+                    'menu_class'        => 'nav navbar-nav navbar-left',
                     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                     'walker'            => new wp_bootstrap_navwalker())
                 );
             ?>
             
-        </div><!-- /.containter -->
+        </div><!-- /.container -->
         
-    </nav><!-- /.navbar -->
+    </div><!-- /.navbar -->

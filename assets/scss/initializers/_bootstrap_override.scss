@@ -1,23 +1,100 @@
 // Override bootstrap styles here
 
-.page-header {
-  border-bottom: 1px solid darken($light-gray, 5);
-}
+$screen-lg-min: 1200px;
+$screen-md-min: 992px;
+$screen-sm-min: 768px;
 
-@media (min-width: 768px) {
-    .navbar {
-        border-radius: 0;
+@media (min-width: $screen-md-min) {
+    .navbar-collapse {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
 .navbar-inverse {
-     background-color: $black;
-     border-color: #080808;
+    background-color: $black;
+    border-radius: 0px;
+    border-width: 0px;
 }
-
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > .active > a:hover {
-    font-weight: 700;
-    background-color: #000000;
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+    background-color: $black;
+}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: $black;
+}
+.dropdown-menu {
+    background-color: $black;
+    border-radius: 0px;
+    border-width: 0px;
+}
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    background-color: $black;
+}
+.navbar-inverse { 
+    background-image: none;
+}
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    background-image: none;
+}
+.navbar-inverse {
+    border-color: $black;
+}
+.navbar-inverse .navbar-brand {
+    color: $white;
+}
+.navbar-inverse .navbar-brand:hover {
+    color: $red;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: $white
+}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+    color: $red;
+}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.current-menu-parent>a { 
+    color: $red;
+}
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus { 
+    color: $red;
+}
+.dropdown-menu>li>a {
+    color: $white;
+}
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus {
+    color: $red;
+}
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:focus,
+.dropdown-menu>.active>a:hover {
+    color: $red;
+    background-color: $black;
+}
+.navbar-inverse .navbar-nav>.dropdown>a .caret {
+    border-top-color: #999999;
+}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+    border-top-color: $white;
+}
+.navbar-inverse .navbar-nav>.dropdown>a .caret {
+    border-bottom-color: #999999;
+}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
+    border-bottom-color: $white;
 }
