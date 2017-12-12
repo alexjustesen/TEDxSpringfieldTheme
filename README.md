@@ -51,8 +51,8 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 #### v1.3.0 (in development)
 - `partials/_call_to_action.php` - updated cta UI and made coding improvements
-..* made coding improvements
-..* updated cta UI
+  * made coding improvements
+  * updated cta UI
 - `header.php` - fixed issue with date format code and moved cta container to `partials/_call_to_action.php`
 - `style.css` - added text domain and required core wp styles
 - Updated event date in the customizer to a date field
