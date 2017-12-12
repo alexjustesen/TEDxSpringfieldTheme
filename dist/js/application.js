@@ -20,31 +20,3 @@ $( document ).ready( function () {
     // Initiate matchHeight js function
     $('.match-height').matchHeight();
 });
-
-//-- Initiate responsive-toolkit --------------------------------------------
-(function($, document, window, viewport){
-    
-    // Executes once whole document has been loaded
-    $(document).ready(function() {
-        navbarChange();
-    });
-
-    $(window).resize(
-        viewport.changed(function(){
-            navbarChange();
-        })
-    );
-    
-    function navbarChange() {
-        if( viewport.is("<=sm") ) {
-            $( 'nav.navbar' ).removeClass( 'navbar-static-top' ).addClass( 'navbar-fixed-top' );
-            $( 'body' ).css( 'padding-top', '50px' );
-        }
-
-        if( viewport.is(">=md") ) {
-            $( 'nav.navbar' ).addClass( 'navbar-static-top' ).removeClass( 'navbar-fixed-top' );
-            $( 'body' ).css( 'padding-top', '0px' );
-        }
-    }
-
-})(jQuery, document, window, ResponsiveBootstrapToolkit);
