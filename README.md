@@ -49,10 +49,23 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
-#### v1.3.0-beta2 (in development)
+#### v1.3.0-beta2 (Dec 13, 2017)
+- `includes/admin/plugin_dependencies.php`
+  * removed hardcoded link
+- `includes/controls/textarea_custom_control.php`
+  * removed php short tags
+- `includes/theme_support.php`
+  * added automatic feed links theme support
+- `includes/theme/enqueue_scripts.php`
+  * updated versions to 1.3.0-beta2
 - `header.php`
   * moved navbar container to outside the wp_nav_menu function
+  * removed php short tags
   * renamed navbar container id
+  * wrapped urls in esc_url to sanitize the values
+- `footer.php`
+  * removed php short tags
+  * replaced copywrite tag with html equivalent
 
 #### v1.3.0-beta (Dec 12, 2017)
 - `assets/js/application.js`
