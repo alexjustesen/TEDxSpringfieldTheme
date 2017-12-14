@@ -49,6 +49,11 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.3.0-beta2 (in development)
+- `header.php`
+  * moved navbar container to outside the wp_nav_menu function
+  * renamed navbar container id
+
 #### v1.3.0-beta (Dec 12, 2017)
 - `assets/js/application.js`
   * removed cta slideDown function
