@@ -2,7 +2,7 @@
 class PluginDependencies {
 
   var $dependencies = [
-    'advanced-custom-fields/acf.php' => 'You must install and activate the <a href="http://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields</a> Plugin'
+    'advanced-custom-fields/acf.php' => 'You must install and activate the <a href="//www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields</a> Plugin'
   ];
 
   function __construct () {
