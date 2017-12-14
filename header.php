@@ -1,5 +1,5 @@
 <?php
-    $template_url = get_template_directory_uri();
+    $template_directory_uri = esc_url( get_template_directory_uri() );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -11,12 +11,12 @@
   <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
   <!-- Favicons -->
-  <link href="<?= $template_url; ?>/dist/img/favicons/favicon.ico" rel="shortcut icon">
-  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
-  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
-  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="<?= $template_url; ?>/dist/img/favicons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="<?php echo $template_directory_uri; ?>/dist/img/favicons/favicon.ico" rel="shortcut icon">
+  <link href="<?php echo $template_directory_uri; ?>/dist/img/favicons/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?php echo $template_directory_uri; ?>/dist/img/favicons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
+  <link href="<?php echo $template_directory_uri; ?>/dist/img/favicons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="<?php echo $template_directory_uri; ?>/dist/img/favicons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="<?php echo $template_directory_uri; ?>/dist/img/favicons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
 
   <?php wp_head(); ?>
   
@@ -37,9 +37,9 @@
                 <div class="row">
 
                     <div class="col-xs-12 col-md-3 col-lg-3 hidden-xs hidden-sm">
-                        <?php (get_theme_mod('logo')) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
-                        <a href="<?= home_url(); ?>" target="_self">
-                            <img src="<?= $logo ?>" alt="Logo" class="img-responsive">
+                        <?php ( get_theme_mod('logo') ) ? $logo = get_theme_mod('logo') : $logo = '//placehold.it/229x50.png' ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" target="_self">
+                            <img src="<?php echo $logo ?>" alt="Logo" class="img-responsive">
                         </a>
                     </div>
 
@@ -57,15 +57,15 @@
                         <span class="pull-right social-links">
                             
                             <?php if ( !@empty( get_theme_mod( 'facebook_url') ) ) : ?>
-                                <a href="<?= get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link link-facebook" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
+                                <a href="<?php echo get_theme_mod( 'facebook_url' ); ?>" target="_blank" class="btn btn-link link-facebook" rel="noopener"><i class="fa fa-2x fa-facebook"></i></a>
                             <?php endif; ?>
                             
                             <?php if ( !@empty( get_theme_mod( 'instagram_account') ) ) : ?>
-                                <a href="https://www.instagram.com/<?= get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link link-instagram" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/<?php echo get_theme_mod( 'instagram_account' ); ?>" target="_blank" class="btn btn-link link-instagram" rel="noopener"><i class="fa fa-2x fa-instagram"></i></a>
                             <?php endif; ?>
                             
                             <?php if ( !@empty( get_theme_mod( 'twitter_account') ) ) : ?>
-                                <a href="https://www.twitter.com/<?= get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link link-twitter" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
+                                <a href="https://www.twitter.com/<?php echo get_theme_mod( 'twitter_account' ); ?>" target="_blank" class="btn btn-link link-twitter" rel="noopener"><i class="fa fa-2x fa-twitter"></i></a>
                             <?php endif; ?>
                             
                         </span>

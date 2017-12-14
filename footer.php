@@ -15,7 +15,7 @@
                 <div class="col-xs-6">
                     <p class="legal">
                     This independent TEDx event is operated under license from <a href="//www.ted.com/" rel="noopener" target="_blank">TED</a>.<br>
-                        Copyright © <?= get_theme_mod('event_name', 'TEDx') ?> <?= date("Y"); ?>. All Rights Reserved.</p>
+                        Copyright &copy; <?php echo get_theme_mod('event_name', 'TEDx') ?> <?php echo date("Y"); ?>. All Rights Reserved.</p>
                 </div>
                 
                 <div class="col-xs-6">
