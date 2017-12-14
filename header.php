@@ -85,7 +85,7 @@
         <div class="container">
            
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tedx-navbar-primary">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-container">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -96,19 +96,20 @@
                 </div>
             </div><!-- /.navbar-header -->
             
-            <?php
-                wp_nav_menu( array(
-                    'menu'              => 'primary',
-                    'theme_location'    => 'primary',
-                    'depth'             => 2,
-                    'container'         => 'div',
-                    'container_class'   => 'collapse navbar-collapse',
-                    'container_id'      => 'tedx-navbar-primary',
-                    'menu_class'        => 'nav navbar-nav navbar-left',
-                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                    'walker'            => new wp_bootstrap_navwalker())
-                );
-            ?>
+            <div id="navbar-container" class="collapse navbar-collapse">
+                
+                <?php
+                    wp_nav_menu( array(
+                        'menu'              => 'primary',
+                        'theme_location'    => 'primary',
+                        'depth'             => 2,
+                        'menu_class'        => 'nav navbar-nav navbar-left',
+                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                        'walker'            => new wp_bootstrap_navwalker())
+                    );
+                ?>
+                
+            </div>
             
         </div><!-- /.container -->
         
