@@ -13,6 +13,9 @@ register_sidebar(array_merge($sidebar_settings, ['name' => 'Home Sidebar', 'id' 
 add_image_size('post-sticky', 688, 350, true);
 add_image_size('post-unsticky', 440, 240, true);
 
+// Theme Support Options
+add_theme_support( 'automatic-feed-links' );
+
 function tedx_customize_register ($wp_customize) {
 
   // Section
