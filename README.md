@@ -13,31 +13,28 @@ This theme has been designed and coded by [The Working Group](http://twg.ca) and
 
 ### Requirements
 
-* **PHP 5.4** or greater
-* **MySQL 5.0** or greater
-* The **mod_rewrite** Apache module
-* A recent version of **WordPress**
+#### Server
+* **PHP** v5.2.4 or greater
+* **MySQL** (or any MariaDB version) v5.0.15 or greater
+* **Apache** mod_rewrite module enabled
+
+#### Software
+* **WordPress** v4.8 or greater
+* **Advanced Custom Fields** WordPress plugin
+* **Option Tree** WordPress plugin
 
 ### Installation (Production)
 * Download the latest theme release [TEDx Theme](https://github.com/alexjustesen/TEDxSpringfieldTheme/releases)
 * Set the Permalink Settings to customer structure `/blog/%postname%/`
-* Install the following WordPress plugins dependencies:
-    * [Advanced Custom Fields](http://www.advancedcustomfields.com/)
-    * [Option Tree](https://wordpress.org/plugins/option-tree/)
 
 ### Installation (Developers)
-
 * Clone/fork or download the latest repo zip from (https://github.com/alexjustesen/TEDxSpringfieldTheme) and install it to `./wp-content/themes/`.
 * Run using bash command line in the theme folder `npm install` then `bower install` to install builder dependencies
 * Run `gulp` or `gulp default` to build the theme files
 * Set the Permalink Settings to customer structure `/blog/%postname%/`
-* Install the following WordPress plugins dependencies:
-    * [Advanced Custom Fields](http://www.advancedcustomfields.com/)
-    * [Option Tree](https://wordpress.org/plugins/option-tree/)
 
 
 ### Development
-
 We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs.com/) and [Bower](http://bower.io/). You'll need to have `npm` installed before getting started. Development requires an understanding of the following commands:
 
 * `npm install` - Install development dependencies.
@@ -48,6 +45,10 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 
 ### Change Log
+
+#### v1.3.0-rc1 (Dec 18, 2017)
+- `page_templates/template_home.php`
+  * Removed banner container, support for acf will come in v2.0
 
 #### v1.3.0-beta2 (Dec 13, 2017)
 - `includes/admin/plugin_dependencies.php`
