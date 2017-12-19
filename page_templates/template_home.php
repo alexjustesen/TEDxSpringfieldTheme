@@ -6,14 +6,6 @@ Template Name: Homepage
 get_header();
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <img src="<?php the_field( 'banner_background' ); ?>" class="img-responsive"/>
-        </div>
-    </div>
-</div>
-
 <div class="container contents">
   <div class="row">
     <div class="col-md-9">
