@@ -46,6 +46,9 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.3.0 (Jan 17, 2018)
+- Released v1.3.0
+
 #### v1.3.0-rc1 (Dec 18, 2017)
 - `page_templates/template_home.php`
   * Removed banner container, support for acf will come in v2.0
