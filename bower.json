@@ -1,12 +1,12 @@
 {
   "name": "tedxspringfield",
-  "version": "1.0.2",
+  "version": "1.4.0",
   "homepage": "https://github.com/alexjustesen/TEDxSpringfieldTheme",
   "authors": [
     {
       "name": "Alex Justesen",
       "email": "alex@alexjustesen.com",
-      "homepage": "http://alexjustesen.com"
+      "homepage": "https://alexjustesen.com"
     }
   ],
   "license": "MIT",
