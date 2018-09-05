@@ -960,18 +960,6 @@ ul.page-numbers {
 .single-speaker-container a.btn-link {
   color: #666; }
 
-.link-facebook:active,
-.link-facebook:hover {
-  color: #3b5998; }
-
-.link-instagram:active,
-.link-instagram:hover {
-  color: #4c5fd7; }
-
-.link-twitter:active,
-.link-twitter:hover {
-  color: #00b6f1; }
-
 .team-photo {
   padding: 15px 0; }
 
@@ -998,3 +986,6 @@ ul.page-numbers {
   display: block;
   /* adjust 'height' to position overlay content vertically */
   height: 45%; }
+
+#sidebar > ul > li {
+  margin-bottom: 30px; }
