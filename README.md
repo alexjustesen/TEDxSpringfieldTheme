@@ -46,6 +46,46 @@ We've done our best to setup an efficient workflow using [Gulp.js](http://gulpjs
 
 ### Change Log
 
+#### v1.4.0-alpha (Sept 5th, 2018)
+- This is a prerelease build for version 1.4.0
+- `assets/scss/application.scss`
+  * added sidebar list style
+  * removed social header styles
+- `includes/theme_setup.php`
+  * change customizer section order
+  * changed sidebar ids for blog, home and page sidebars
+  * fixed theme slug inconsistencies
+  * improved file documentation
+  * moved add_theme_support() calls to a function and added add_action() call
+  * moved register_sidebar() calls to a function and added add_action() call
+  * removed add_image_size()
+  * updated section titles
+- `includes/theme/enqueue_scripts.php`
+  * fixed issue where `style.css` was not being loaded
+  * organized file
+  * renamed add_action function
+  * updated assets version to 1.4.0
+- `page_templates/template_home.php`
+  * simplified template file
+- `header.php`
+  * fixed wp_title() issue
+  * moved social links to navbar
+  * ui improvements
+- `home.php`
+  * added column ids
+  * cleaned up template file
+- `index.php`
+  * added column ids
+- `page.php`
+  * added column ids
+  * cleaned up template file
+- `sidebar.php`
+  * renamed sidebars
+- `single.php`
+  * added column ids
+- `style.css`
+  * added wp calendar styles
+
 #### v1.3.0 (Jan 17, 2018)
 - Released v1.3.0
 
