@@ -7,7 +7,7 @@ $unsticky_posts = $query->unsticky_posts();
   <div class="container spacing-top">
     <div class="row">
 
-      <div class="col-md-9">
+      <div id="main" class="col-md-9">
 
         <div class="page-header">
           <h4><?= TEDxHelpers::index_title('Blog Posts'); ?></h4>
@@ -28,7 +28,7 @@ $unsticky_posts = $query->unsticky_posts();
       </div>
       <!-- .col-md-8 -->
 
-      <div class="col-md-3">
+      <div id="sidebar" class="col-md-3">
         <?php get_sidebar(); ?>
       </div>
       <!-- .col-md-4 -->

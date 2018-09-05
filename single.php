@@ -3,12 +3,12 @@
   <div class="container spacing-top">
     <div class="row">
 
-      <div class="col-md-9">
+      <div id="main" class="col-md-9">
         <?php WP_Render::partial('partials/blog/_content.php'); ?>
       </div>
       <!-- .col-md-9 -->
 
-      <div class="col-md-3">
+      <div id="sidebar" class="col-md-3">
         <?php get_sidebar(); ?>
       </div>
       <!-- .col-md-3 -->
