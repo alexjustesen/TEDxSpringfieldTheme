@@ -3,9 +3,7 @@
   "version": "1.0.2",
   "description": "A TEDx WordPress theme built by The Working Group (http://twg.ca) and TEDxToronto and modified by Alex Justesen (http://alexjustesen.com).",
   "main": "Gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
